@@ -1,0 +1,219 @@
+/*==========================================================================
+ * GLOBAL STYLING
+ * ========================================================================*/
+
+a {
+  text-decoration:none;
+  color:white;
+}
+
+body {
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-family:Arial,Helvetica,sans-serif;
+}
+.floatL{
+  float:left;
+}
+
+.floatR{
+  float:right;
+}
+
+.clear{
+  clear:both;
+}
+
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+
+.clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+
+
+/* ==============================================================
+ *   Body styling
+ *   ============================================================*/
+
+.main {
+  background:url(../img/yellow-bubbles.png) 0 60px no-repeat;
+  height:100%;
+  /* border: solid white 2px; */
+}
+
+/* ==============================================================
+ *   HEADER styling
+ *   ============================================================*/
+
+.header{
+  background: black;
+  height: 135px; /*header height is fixed */
+  width: 100%;
+}
+
+.header .header_inner{
+  padding: 0 30px;
+}
+
+.logo {
+  padding: 0 0 0 36px;
+  font-family: 'Herr Von Muellerhoff', cursive;
+  color: #B4B4B4;
+  font-size: 48px;
+}
+
+.links_wrapper{
+  padding: 20px 0 0 0;
+
+}
+
+.header ul.links li{
+  float:left;
+
+}
+
+.header ul.links li a{
+  padding: 5px 20px;
+  margin: 0 5px;
+}
+
+.header ul.links li a:hover, .header ul.links li a:focus{
+  background: grey;
+}
+
+
+
+.links a.active{
+  background: grey;
+}
+
+
+
+
+/* ==============================================================
+ *   main content layout styling
+ *   ============================================================*/
+
+.top_content{
+  height: 350px;
+
+}
+.banner {
+  height: 300px;
+  margin:50px auto;
+  float:none;
+  display:block;
+}
+
+
+.middle_content{
+  /*border: solid white 1px;*/
+}
+
+.middle_content .top_pictures_container{
+  height:220px;
+  border-bottom: solid #301D1D 1px;
+  background: black;
+}
+.middle_content .bottom_social_container{
+  height: 100px;
+  background: black;
+
+}
+
+.footer {
+  height: 400px;
+  background: grey;
+}
+
+
+
+/* ==================================================================
+ * Slides
+ * =================================================================*/
+
+#slides{
+  position:relative;
+}
+
+.slides_container_wrapper{
+  height: 280px;
+  background: black;
+  overflow:hidden;
+  -moz-box-shadow: 0 7px 15px 0 rgba(27, 27, 27, 0.63);
+  -webkit-box-shadow: 0 7px 15px 0 rgba(27, 27, 27, 0.63);
+  box-shadow: 0 7px 15px 0 rgba(27, 27, 27, 0.63);
+
+}
+.slides_container{
+}
+
+.pager li, .pagination li {
+  float:left;
+  padding: 5px;
+
+}
+.slide_info_container {
+  position:absolute;
+  top:0;
+  left: 0;
+  z-index:5;
+  height:300px;
+  width: 350px;
+  background: rgba(0,0,0,0.4);
+
+
+}
+.slide_info {
+  padding: 30px;
+  color: rgba(255,255,255,0.9);
+}
+
+.pagination {
+  margin: 10px 0 0 0;
+  float:right;
+}
+
+.pagination a {
+  color: darkgrey;
+}
+
+.pagination .current a{
+  color: black;
+}
+
+#slides .next {
+  position: absolute;
+  right:-24px;
+  top: 118px;
+
+}
+
+#slides .prev {
+  position: absolute;
+  left: -24px;
+  top: 118px;
+}
