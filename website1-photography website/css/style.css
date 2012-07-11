@@ -220,12 +220,13 @@ h2 {
 
 .middle_content .top_pictures_container{
   height:220px;
-  float:none;
-  margin: 0 auto;
+  border-bottom: solid #301D1D 1px;
 }
-.middle_content .bottom_social_container{
-  height: 100px;
 
+.middle_content .top_pictures_inner{
+  overflow:hidden;
+  float:none;
+  margin: 50px auto ;
 }
 
 
@@ -249,4 +250,31 @@ h2 {
   bottom: 0;
   width: 100%;
   background: rgba(0,0,0,0.7);
+}
+
+.triangle{
+  position: absolute;
+  z-index:2;
+  border-style: solid;
+  border-width: 13px;
+  width: 0;
+  height: 0;
+}
+.triangle.tri_rt{
+  border-color: black black transparent transparent;
+  right: 0;
+  top: 0;
+}
+
+.triangle.tri_lt{
+  border-color: black transparent transparent black;
+  left: 0;
+  top: 0;
+}
+
+
+
+.middle_content .bottom_social_container{
+  height: 100px;
+
 }

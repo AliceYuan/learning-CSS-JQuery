@@ -1,0 +1,66 @@
+//SASS Variables
+$back_color: #ebedf0;//light blue background color
+//SASS Import
+@import "compass";
+
+//=========================================================================
+
+
+/* ==========================================================================
+ * Global Styling Changes
+ * ==========================================================================*/
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  background: #ebedf0;//light blue
+  font-size: 13px;
+}
+
+
+
+/* ==========================================================================
+ * Addtional Global Styling
+ * ==========================================================================*/
+
+/* ==========================================================================
+ * Header Styling
+ * ==========================================================================*/
+.header {
+  height: 50px;
+  // needs latest Compass, add '@import "compass"' to your scss
+  background-color: #22222b; // Old browsers
+  @include filter-gradient(#22222b, #16161b, vertical); // IE6-8
+  // IE9 SVG, needs conditional override of 'filter' to 'none'
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  #22222b 0%,#16161b 100%));
+}
+
+.headerInner{
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.headerMenu{
+  float:right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: solid black 1px;
+  border-right: solid #292929 1px;
+
+}
+
+.headerMenu li {
+  float:left;
+  //display:inline-block;
+  padding: 18px 0;
+  border-right: solid black 1px;
+  border-left: solid #292929 1px;
+}
+
+
+.headerMenu li a{
+  padding: 18px 25px;
+  color: #bbc3c6;
+  text-decoration:none;
+}
