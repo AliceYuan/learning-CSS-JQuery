@@ -21,6 +21,12 @@ body {
   float:right;
 }
 
+.break{
+  height:1px;
+  border-bottom: solid #301D1D 1px;
+  overflow:hidden;
+}
+
 .clear{
   clear:both;
 }
@@ -128,22 +134,6 @@ h2 {
   display:block;
 }
 
-
-.middle_content{
-  /*border: solid white 1px;*/
-}
-
-.middle_content .top_pictures_container{
-  height:220px;
-  border-bottom: solid #301D1D 1px;
-  background: black;
-}
-.middle_content .bottom_social_container{
-  height: 100px;
-  background: black;
-
-}
-
 .footer {
   height: 400px;
   background: grey;
@@ -216,4 +206,47 @@ h2 {
   position: absolute;
   left: -24px;
   top: 118px;
+}
+
+
+/* =====================================================
+ * middle content pictures styling
+ * ====================================================*/
+
+.middle_content{
+  /*border: solid white 1px;*/
+  background: black;
+}
+
+.middle_content .top_pictures_container{
+  height:220px;
+  float:none;
+  margin: 0 auto;
+}
+.middle_content .bottom_social_container{
+  height: 100px;
+
+}
+
+
+
+
+.middle_content .medium_picture{
+  float: left;
+  width: 260px;
+  overflow: hidden;
+  border: solid #1d1814 3px;
+  position:relative;
+}
+
+.middle_content .medium_picture.margin_left{
+  margin-left: 31px;
+}
+
+.middle_content .medium_picture .picture_desc{
+  position:absolute;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
 }
