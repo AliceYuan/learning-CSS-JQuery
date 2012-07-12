@@ -1,5 +1,6 @@
 //SASS Variables
 $back_color: #ebedf0;//light blue background color
+$overview_border_radius: 6px;
 //SASS Import
 @import "compass";
 
@@ -15,16 +16,71 @@ body {
   font-size: 13px;
 }
 
+h2{
+  font-size: 1.75em;
+}
+
 
 
 /* ==========================================================================
  * Addtional Global Styling
  * ==========================================================================*/
 
+//clearfix
+.clear{
+  clear:both;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+
+* html .clearfix {
+	height: 1%;
+}
+
+//no border
+noBorderL{
+  border-left:none;
+}
+noBorderR{
+  border-left:none;
+}
+
 /* ==========================================================================
- * Header Styling
+ * Header -General Styling
  * ==========================================================================*/
-.header {
+
+.headerMenu{
+  position: absolute;
+}
+
+.headerMenu li {
+  float:left;
+  position:relative;
+  //display:inline-block;
+}
+
+
+.headerMenu li a{
+  text-decoration:none;
+  display:block;
+}
+
+/* ==========================================================================
+ * Header -Top Header Styling
+ * ==========================================================================*/
+.mainHeader {
   height: 50px;
   // needs latest Compass, add '@import "compass"' to your scss
   background-color: #22222b; // Old browsers
@@ -34,33 +90,253 @@ body {
   @include background-image(linear-gradient(top,  #22222b 0%,#16161b 100%));
 }
 
-.headerInner{
+.mainHeader .headerInner{
   width: 1000px;
   margin: 0 auto;
   position: relative;
 }
 
-.headerMenu{
+
+
+.mainHeader .headerMenu{
   float:right;
-  position: absolute;
-  top: 0;
-  right: 0;
   border-left: solid black 1px;
   border-right: solid #292929 1px;
+  top: 0;
+  right: 0;
+
+
+  li{
+    border-right: solid black 1px;
+    border-left: solid #292929 1px;
+  }
 
 }
 
-.headerMenu li {
-  float:left;
-  //display:inline-block;
-  padding: 18px 0;
-  border-right: solid black 1px;
-  border-left: solid #292929 1px;
+
+.mainHeader .headerMenu li a:hover, .headerMenu li a:focus{
+  background: #16161b;
 }
 
-
-.headerMenu li a{
-  padding: 18px 25px;
+.mainHeader .headerMenu li a{
+  padding: 17px 25px;
   color: #bbc3c6;
   text-decoration:none;
+}
+
+.mainHeader .headerNotification{
+  text-align:center;
+  color:#ffffff;
+
+  position: absolute;
+  top: 6px;
+  right: 15px;
+  height:15px;
+  width: 15px;
+  z-index:1;
+  @include border-radius(50%);
+  // needs latest Compass, add '@import "compass"' to your scss
+  background-color: #e64a59; // Old browsers
+  @include filter-gradient(#e64a59, #b6040a, vertical); // IE6-8
+  // IE9 SVG, needs conditional override of 'filter' to 'none'
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top, #e64a59 0%,#b6040a 100%));
+
+  p{
+    font-size: 10px;
+    margin: 2px 0;
+  }
+
+}
+
+/* **************************************************************************
+ * Main Content Starts here
+ * **************************************************************************/
+.contentContainer{
+  position: relative;
+  width: 1000px;
+  margin: 40px auto;
+}
+
+.mainContent{
+  width:740px;
+}
+
+/* ============================================================================
+ * Main Content - Overview styling
+ * ==========================================================================*/
+.overviewContainer{
+  height: 355px;
+  background: #424451;
+  position:relative;
+  overflow:hidden;
+  @include border-radius($overview_border_radius );
+ }
+
+
+/* ============================================================================
+ * Main Content - Overview - Header styling
+ * ==========================================================================*/
+.overviewHeader{
+  font-weight: bold;
+
+
+  border-bottom: solid #505363 1px;//lighter border
+  @include border-radius($overview_border_radius );
+  // needs latest Compass, add '@import "compass"' to your scss
+  background-color: #3f414e; // Old browsers
+  @include filter-gradient(#3f414e, #373844, vertical); // IE6-8
+  // IE9 SVG, needs conditional override of 'filter' to 'none'
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  #3f414e 0%,#3f414d 31%,#373844 100%));
+  height:50px;
+}
+
+
+.overviewHeader .headerMenu{
+  border-right: solid #505363 1px;//lighter border
+  top: 0;
+  left: 0;
+  text-shadow: 1px 0 0 #1b1c22;
+
+}
+
+.overviewHeader .headerMenu li {
+  border-right: solid #2b2d36 1px;//darker border
+  border-left: solid #505363 1px;//lighter border
+
+
+  .icon{
+    position: absolute;
+    left:17px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .headerOverview .icon{
+    background: url(../../img/glyphicons-halflings-white.png) no-repeat -265px -24px;
+  }
+  .headerMilestones .icon{
+    background: url(../../img/glyphicons-halflings-white.png) no-repeat -190px -120px;
+  }
+
+  .headerTasks .icon{
+    background: url(../../img/glyphicons-halflings-white.png) no-repeat -264px 0 ;
+  }
+  .headerFiles .icon{
+    background: url(../../img/glyphicons-halflings-white.png) no-repeat -26px -24px;
+  }
+  .headerMessages .icon{
+    background: url(../../img/glyphicons-halflings-white.png) no-repeat -72px 0;
+  }
+  .headerCommunication .icon{
+    background: url(../../img/glyphicons-halflings-white.png) no-repeat -168px 0;
+  }
+
+}
+
+
+.overviewHeader .headerMenu li.first {
+  border-left:none;
+  @include border-top-left-radius($overview_border_radius);
+}
+.overviewHeader .headerMenu li a:hover, .headerMenu li a:focus{
+  background: #373844;
+}
+.overviewHeader .headerMenu li.active a:hover, .headerMenu li.active a:focus{
+  background:transparent;
+  cursor:default;
+}
+.overviewHeader .headerMenu li a.first{
+  @include border-top-left-radius($overview_border_radius);
+}
+
+.overviewHeader .headerMenu li a{
+  padding: 17px 20px 17px 35px;
+  color: #ebedf1;
+  text-decoration:none;
+}
+
+.overviewHeaderBorder{//adds a dark border-bottom
+  width:100%;
+  height:49px;
+  border-bottom: solid #2b2d36 1px;//darker border
+}
+
+.overviewHeader .headerMenu li.active{
+  background: #424451;
+  border-bottom: solid 4px #424451;
+}
+.overviewHeader .headerMenu li a.active.first{
+  @include border-top-left-radius($overview_border_radius);
+}
+
+/* ============================================================================
+ * Main Content - Overview - Content styling
+ * ==========================================================================*/
+
+.overviewContentTop{
+  color: white;
+  padding: 30px 35px;
+
+  .overviewBar1 div{
+    float:left;
+  }
+
+  .overviewBar1{
+    text-shadow: 1px 0 0 #1b1c22;
+    padding: 0 0 30px 0;
+    border-bottom:  solid 1px #525461;
+    width: 100%;
+
+    .userName{
+      padding-right: 25px;
+      border-right: solid 1px #525461;
+
+      h2{
+        font-weight: bold;
+      }
+    }
+
+    .title{
+      padding-left: 25px;
+
+      h2{
+        font-weight: 200;
+        color:#c5c7d2;
+      }
+    }
+  }
+
+  .overviewBar2 div{
+    float:left;
+  }
+
+  .overviewBar2{
+    padding: 30px 0 0 0;
+
+    .outer_col1{
+      width:250px;
+      border-right: solid 1px #525461;
+    }
+    .outer_col2{
+      padding: 0 0 0 30px ;
+      width:385px;
+    }
+  }
+
+
+}
+
+
+
+
+/* **************************************************************************
+ * Sidebar Starts here
+ * **************************************************************************/
+.sidebar{
+  margin-left: 32px;
+}
+.sidebar .userInfo{
+
 }
