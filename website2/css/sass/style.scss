@@ -307,10 +307,11 @@ noBorderR{
   }
 
   .overviewBar1{
-    text-shadow: 1px 0 0 #1b1c22;
-    padding: 0 0 30px 0;
-    border-bottom:  solid 1px #525461;
-    width: 100%;
+    text-shadow:            1px 0 0 #1b1c22;
+    padding:                0 0 30px 0;
+    border-bottom:          solid 1px #525461;
+    width:                  100%;
+    position:               relative;
 
     .userName{
       padding-right: 25px;
@@ -329,6 +330,56 @@ noBorderR{
         color:#c5c7d2;
       }
     }
+
+    .edit{
+      background-color:       #1faeee; // Old browsers
+      color:                  white;
+      font-weight:            bold;
+      height:                 25px;
+      position:               absolute;
+        top:                  0px;
+        right:                10px;
+      text-shadow:            0 -1px 0 #0d74db;
+      width:                  73px;
+      @include box-shadow(0px 0px 4px #2f3d46, inset 0 1px 1px #36ebfb);
+      // needs latest Compass, add '@import "compass"' to your scss
+      @include filter-gradient(#1faeee, #248fd3, vertical); // IE6-8
+      // IE9 SVG, needs conditional override of 'filter' to 'none'
+      $experimental-support-for-svg: true;
+      @include background-image(linear-gradient(top,  #1faeee 0%,#248fd3 100%));
+      @include border-radius(25px);
+
+      a {
+        color:                white;
+        display:              block;
+        height:               100%;
+        position:             relative;
+        text-decoration:      none;
+        @include border-radius(25px);
+
+        &:hover, &:focus{
+          @include box-shadow( inset 0 1px 4px #36ebfb);
+        }
+
+        &:active{
+          @include box-shadow( inset 0 1px 1px #36ebfb);
+          background-color:     #2395d8; // Old browsers
+        }
+        div{
+          position:             absolute;
+            top:                1px;
+            left:               13px;
+          height:               17px;
+          width:                17px;
+          background:           url(../../img/glyphicons-halflings-white.png) no-repeat 0 -69px;
+        }
+        p{
+          position:            absolute;
+            top:               2px;
+            right:             15px;
+        }
+      }
+    }
   }
 
   .overviewBar2 div{
@@ -338,19 +389,18 @@ noBorderR{
   .overviewBar2{
     text-shadow: 1px 0 0 #1b1c22;
     padding: 30px 0 0 0;
-
     p{
       margin-bottom: 1.3em;
     }
-    .outer_col1{
+    .outerCol1{
       width:250px;
       border-right: solid 1px #525461;
 
-      .statusLabel.inner_col1{
+      .statusLabel.innerCol1{
         color: #c3d1d4;
         text-shadow: 1px 1px 0 #1b1c22;
       }
-      .statusField.inner_col2{
+      .statusField.innerCol2{
         padding-left: 35px;
 
         .clientName{
@@ -359,7 +409,7 @@ noBorderR{
 
       }
     }
-    .outer_col2{
+    .outerCol2{
       padding: 0 0 0 30px ;
       width:385px;
       .descBody{
@@ -373,36 +423,61 @@ noBorderR{
   height: 82px;
   color: white;
   border-top:  solid 1px #525461;
+  position: relative;
 
   background-color: #2a2c34; // Old browsers
   @include filter-gradient(#2a2c34, #2a2c34, vertical); // IE6-8
   // IE9 SVG, needs conditional override of 'filter' to 'none'
   $experimental-support-for-svg: true;
   @include background-image(linear-gradient(top,  #2a2c34 0%,#2c2e37 52%,#2a2c34 100%));
-
   @include border-radius(0 0 $overview_border_radius $overview_border_radius);
 
-  .overviewDateWrapper.outer_col1{
-    position:relative;
-    padding: 28px 35px 0 35px;
+  .overviewDateWrapper.outerCol1{
+    position:                   relative;
+    width:                      420px;
+    border-right:               solid 1px #1a1c21;
+    height:                     100%;
+    float:                      left;
 
     .overviewDate{
-      h1, p{
-        float:left;
+      height:                   100%;
+      position:                 relative;
+      margin:                   28px 35px 0 35px;
+      h1,p{
+        float:                  left;
       }
       h1.dayNumber{
-        margin-right: 10px;
+        font-size:              2.2em; //24/13px
+        margin-top:             -8px;
+        margin-right:           10px;
+      }
+      .daysLeft, .timeline{
+        height:                 20px;
+      }.daysLeft{
+        padding-right:          15px;
+        border-right:           solid 1px #41424c;
+        margin-top:             8px;
+        //position:
+      }.timeline{
       }
       .daysLeftLabel{
-        color:#c5c7d2;
+        color:                   #c5c7d2;
+        margin-top:              3px;
       }
 
-      .timeline.inner_col2{
+      .timeline.innerCol2{
+        font-size:                0.9em;
+        padding-left:             15px;
+        margin-top:               11px;
         .timelineLabel{
           color: #c3d1d4;
+          margin-right: 6px;
         }
         .timelineDate{
           font-weight:bold;
+        }
+        .dash{
+          margin: 0 4px;
         }
       }
 
@@ -411,9 +486,12 @@ noBorderR{
     .overviewDate div{
       float: left;
     }
-
-
-
+  }
+  .overviewTab.outerCol2{
+    width: 317px;
+    height: 100%;
+    border-left: solid 1px #30323b;
+    float:left;
   }
 
 }

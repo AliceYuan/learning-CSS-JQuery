@@ -355,71 +355,143 @@ noBorderR {
   padding: 0 0 30px 0;
   border-bottom: solid 1px #525461;
   width: 100%;
+  position: relative;
 }
-/* line 315, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 .overviewContentTop .overviewBar1 .userName {
   padding-right: 25px;
   border-right: solid 1px #525461;
 }
-/* line 319, ../sass/style.scss */
+/* line 320, ../sass/style.scss */
 .overviewContentTop .overviewBar1 .userName h2 {
   font-weight: bold;
 }
-/* line 324, ../sass/style.scss */
+/* line 325, ../sass/style.scss */
 .overviewContentTop .overviewBar1 .title {
   padding-left: 25px;
 }
-/* line 327, ../sass/style.scss */
+/* line 328, ../sass/style.scss */
 .overviewContentTop .overviewBar1 .title h2 {
   font-weight: 200;
   color: #c5c7d2;
 }
 /* line 334, ../sass/style.scss */
+.overviewContentTop .overviewBar1 .edit {
+  background-color: #1faeee;
+  color: white;
+  font-weight: bold;
+  height: 25px;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  text-shadow: 0 -1px 0 #0d74db;
+  width: 73px;
+  -webkit-box-shadow: 0px 0px 4px #2f3d46, inset 0 1px 1px #36ebfb;
+  -moz-box-shadow: 0px 0px 4px #2f3d46, inset 0 1px 1px #36ebfb;
+  box-shadow: 0px 0px 4px #2f3d46, inset 0 1px 1px #36ebfb;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF1FAEEE', endColorstr='#FF248FD3');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFmYWVlZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI0OGZkMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1faeee), color-stop(100%, #248fd3));
+  background-image: -webkit-linear-gradient(top, #1faeee 0%, #248fd3 100%);
+  background-image: -moz-linear-gradient(top, #1faeee 0%, #248fd3 100%);
+  background-image: -o-linear-gradient(top, #1faeee 0%, #248fd3 100%);
+  background-image: linear-gradient(top, #1faeee 0%, #248fd3 100%);
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+}
+/* line 352, ../sass/style.scss */
+.overviewContentTop .overviewBar1 .edit a {
+  color: white;
+  display: block;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+}
+/* line 360, ../sass/style.scss */
+.overviewContentTop .overviewBar1 .edit a:hover, .overviewContentTop .overviewBar1 .edit a:focus {
+  -webkit-box-shadow: inset 0 1px 4px #36ebfb;
+  -moz-box-shadow: inset 0 1px 4px #36ebfb;
+  box-shadow: inset 0 1px 4px #36ebfb;
+}
+/* line 364, ../sass/style.scss */
+.overviewContentTop .overviewBar1 .edit a:active {
+  -webkit-box-shadow: inset 0 1px 1px #36ebfb;
+  -moz-box-shadow: inset 0 1px 1px #36ebfb;
+  box-shadow: inset 0 1px 1px #36ebfb;
+  background-color: #2395d8;
+}
+/* line 368, ../sass/style.scss */
+.overviewContentTop .overviewBar1 .edit a div {
+  position: absolute;
+  top: 1px;
+  left: 13px;
+  height: 17px;
+  width: 17px;
+  background: url(../../img/glyphicons-halflings-white.png) no-repeat 0 -69px;
+}
+/* line 376, ../sass/style.scss */
+.overviewContentTop .overviewBar1 .edit a p {
+  position: absolute;
+  top: 2px;
+  right: 15px;
+}
+/* line 385, ../sass/style.scss */
 .overviewContentTop .overviewBar2 div {
   float: left;
 }
-/* line 338, ../sass/style.scss */
+/* line 389, ../sass/style.scss */
 .overviewContentTop .overviewBar2 {
   text-shadow: 1px 0 0 #1b1c22;
   padding: 30px 0 0 0;
 }
-/* line 342, ../sass/style.scss */
+/* line 392, ../sass/style.scss */
 .overviewContentTop .overviewBar2 p {
   margin-bottom: 1.3em;
 }
-/* line 345, ../sass/style.scss */
-.overviewContentTop .overviewBar2 .outer_col1 {
+/* line 395, ../sass/style.scss */
+.overviewContentTop .overviewBar2 .outerCol1 {
   width: 250px;
   border-right: solid 1px #525461;
 }
-/* line 349, ../sass/style.scss */
-.overviewContentTop .overviewBar2 .outer_col1 .statusLabel.inner_col1 {
+/* line 399, ../sass/style.scss */
+.overviewContentTop .overviewBar2 .outerCol1 .statusLabel.innerCol1 {
   color: #c3d1d4;
   text-shadow: 1px 1px 0 #1b1c22;
 }
-/* line 353, ../sass/style.scss */
-.overviewContentTop .overviewBar2 .outer_col1 .statusField.inner_col2 {
+/* line 403, ../sass/style.scss */
+.overviewContentTop .overviewBar2 .outerCol1 .statusField.innerCol2 {
   padding-left: 35px;
 }
-/* line 356, ../sass/style.scss */
-.overviewContentTop .overviewBar2 .outer_col1 .statusField.inner_col2 .clientName {
+/* line 406, ../sass/style.scss */
+.overviewContentTop .overviewBar2 .outerCol1 .statusField.innerCol2 .clientName {
   color: #b3def5;
 }
-/* line 362, ../sass/style.scss */
-.overviewContentTop .overviewBar2 .outer_col2 {
+/* line 412, ../sass/style.scss */
+.overviewContentTop .overviewBar2 .outerCol2 {
   padding: 0 0 0 30px;
   width: 385px;
 }
-/* line 365, ../sass/style.scss */
-.overviewContentTop .overviewBar2 .outer_col2 .descBody {
+/* line 415, ../sass/style.scss */
+.overviewContentTop .overviewBar2 .outerCol2 .descBody {
   color: #c3d1d4;
 }
 
-/* line 372, ../sass/style.scss */
+/* line 422, ../sass/style.scss */
 .overviewContentBottom {
   height: 82px;
   color: white;
   border-top: solid 1px #525461;
+  position: relative;
   background-color: #2a2c34;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF2A2C34', endColorstr='#FF2A2C34');
@@ -436,40 +508,80 @@ noBorderR {
   -o-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
 }
-/* line 385, ../sass/style.scss */
-.overviewContentBottom .overviewDateWrapper.outer_col1 {
+/* line 435, ../sass/style.scss */
+.overviewContentBottom .overviewDateWrapper.outerCol1 {
   position: relative;
-  padding: 28px 35px 0 35px;
-}
-/* line 390, ../sass/style.scss */
-.overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate h1, .overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate p {
+  width: 420px;
+  border-right: solid 1px #1a1c21;
+  height: 100%;
   float: left;
 }
-/* line 393, ../sass/style.scss */
-.overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate h1.dayNumber {
+/* line 442, ../sass/style.scss */
+.overviewContentBottom .overviewDateWrapper.outerCol1 .overviewDate {
+  height: 100%;
+  position: relative;
+  margin: 28px 35px 0 35px;
+}
+/* line 446, ../sass/style.scss */
+.overviewContentBottom .overviewDateWrapper.outerCol1 .overviewDate h1, .overviewContentBottom .overviewDateWrapper.outerCol1 .overviewDate p {
+  float: left;
+}
+/* line 449, ../sass/style.scss */
+.overviewContentBottom .overviewDateWrapper.outerCol1 .overviewDate h1.dayNumber {
+  font-size: 2.2em;
+  margin-top: -8px;
   margin-right: 10px;
 }
-/* line 396, ../sass/style.scss */
-.overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate .daysLeftLabel {
+/* line 454, ../sass/style.scss */
+.overviewContentBottom .overviewDateWrapper.outerCol1 .overviewDate .daysLeft, .overviewContentBottom .overviewDateWrapper.outerCol1 .overviewDate .timeline {
+  height: 20px;
+}
+/* line 456, ../sass/style.scss */
+.overviewContentBottom .overviewDateWrapper.outerCol1 .overviewDate .daysLeft {
+  padding-right: 15px;
+  border-right: solid 1px #41424c;
+  margin-top: 8px;
+}
+/* line 463, ../sass/style.scss */
+.overviewContentBottom .overviewDateWrapper.outerCol1 .overviewDate .daysLeftLabel {
   color: #c5c7d2;
+  margin-top: 3px;
 }
-/* line 401, ../sass/style.scss */
-.overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate .timeline.inner_col2 .timelineLabel {
+/* line 468, ../sass/style.scss */
+.overviewContentBottom .overviewDateWrapper.outerCol1 .overviewDate .timeline.innerCol2 {
+  font-size: 0.9em;
+  padding-left: 15px;
+  margin-top: 11px;
+}
+/* line 472, ../sass/style.scss */
+.overviewContentBottom .overviewDateWrapper.outerCol1 .overviewDate .timeline.innerCol2 .timelineLabel {
   color: #c3d1d4;
+  margin-right: 6px;
 }
-/* line 404, ../sass/style.scss */
-.overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate .timeline.inner_col2 .timelineDate {
+/* line 476, ../sass/style.scss */
+.overviewContentBottom .overviewDateWrapper.outerCol1 .overviewDate .timeline.innerCol2 .timelineDate {
   font-weight: bold;
 }
-/* line 411, ../sass/style.scss */
-.overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate div {
+/* line 479, ../sass/style.scss */
+.overviewContentBottom .overviewDateWrapper.outerCol1 .overviewDate .timeline.innerCol2 .dash {
+  margin: 0 4px;
+}
+/* line 486, ../sass/style.scss */
+.overviewContentBottom .overviewDateWrapper.outerCol1 .overviewDate div {
+  float: left;
+}
+/* line 490, ../sass/style.scss */
+.overviewContentBottom .overviewTab.outerCol2 {
+  width: 317px;
+  height: 100%;
+  border-left: solid 1px #30323b;
   float: left;
 }
 
 /* **************************************************************************
  * Sidebar Starts here
  * **************************************************************************/
-/* line 425, ../sass/style.scss */
+/* line 503, ../sass/style.scss */
 .sidebar {
   margin-left: 32px;
   position: absolute;
@@ -480,7 +592,7 @@ noBorderR {
   width: 225px;
 }
 
-/* line 435, ../sass/style.scss */
+/* line 513, ../sass/style.scss */
 .sidebar .userInfo {
   height: 100%;
   background: white;
