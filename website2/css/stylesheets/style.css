@@ -1,43 +1,43 @@
 /* ==========================================================================
  * Global Styling Changes
  * ==========================================================================*/
-/* line 13, ../sass/style.scss */
+/* line 14, ../sass/style.scss */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #ebedf0;
   font-size: 13px;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 20, ../sass/style.scss */
 h1 {
   font-size: 2em;
   font-weight: bold;
 }
 
-/* line 23, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 h2 {
   font-size: 1.5em;
   font-weight: bold;
 }
 
-/* line 28, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 h3 {
   font-size: 1.2em;
   font-weight: bold;
 }
 
-/* line 33, ../sass/style.scss */
+/* line 34, ../sass/style.scss */
 h4 {
   font-size: 1em;
   font-weight: bold;
 }
 
-/* line 39, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 b {
   font-weight: bold;
 }
 
-/* line 43, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 p {
   line-height: 1.5em;
 }
@@ -45,12 +45,12 @@ p {
 /* ==========================================================================
  * Addtional Global Styling
  * ==========================================================================*/
-/* line 52, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 .clear {
   clear: both;
 }
 
-/* line 56, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -60,22 +60,22 @@ p {
   height: 0;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .clearfix {
   display: inline-block;
 }
 
-/* line 70, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 75, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 noBorderL {
   border-left: none;
 }
 
-/* line 78, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 noBorderR {
   border-left: none;
 }
@@ -83,18 +83,18 @@ noBorderR {
 /* ==========================================================================
  * Header -General Styling
  * ==========================================================================*/
-/* line 86, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .headerMenu {
   position: absolute;
 }
 
-/* line 90, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .headerMenu li {
   float: left;
   position: relative;
 }
 
-/* line 97, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .headerMenu li a {
   text-decoration: none;
   display: block;
@@ -103,7 +103,7 @@ noBorderR {
 /* ==========================================================================
  * Header -Top Header Styling
  * ==========================================================================*/
-/* line 105, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 .mainHeader {
   height: 50px;
   background-color: #22222b;
@@ -118,14 +118,14 @@ noBorderR {
   background-image: linear-gradient(top, #22222b 0%, #16161b 100%);
 }
 
-/* line 115, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 .mainHeader .headerInner {
   width: 1000px;
   margin: 0 auto;
   position: relative;
 }
 
-/* line 123, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 .mainHeader .headerMenu {
   float: right;
   border-left: solid black 1px;
@@ -133,25 +133,25 @@ noBorderR {
   top: 0;
   right: 0;
 }
-/* line 131, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 .mainHeader .headerMenu li {
   border-right: solid black 1px;
   border-left: solid #292929 1px;
 }
 
-/* line 139, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .mainHeader .headerMenu li a:hover, .headerMenu li a:focus {
   background: #16161b;
 }
 
-/* line 143, ../sass/style.scss */
+/* line 144, ../sass/style.scss */
 .mainHeader .headerMenu li a {
   padding: 17px 25px;
   color: #bbc3c6;
   text-decoration: none;
 }
 
-/* line 149, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 .mainHeader .headerNotification {
   text-align: center;
   color: #ffffff;
@@ -177,7 +177,7 @@ noBorderR {
   background-image: -o-linear-gradient(top, #e64a59 0%, #b6040a 100%);
   background-image: linear-gradient(top, #e64a59 0%, #b6040a 100%);
 }
-/* line 167, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 .mainHeader .headerNotification p {
   font-size: 10px;
   margin: 0 0;
@@ -186,14 +186,15 @@ noBorderR {
 /* **************************************************************************
  * Main Content Starts here
  * **************************************************************************/
-/* line 177, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 .contentContainer {
+  height: 100%;
   position: relative;
   width: 1000px;
   margin: 40px auto;
 }
 
-/* line 183, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 .mainContent {
   width: 740px;
 }
@@ -201,7 +202,7 @@ noBorderR {
 /* ============================================================================
  * Main Content - Overview styling
  * ==========================================================================*/
-/* line 190, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 .overviewContainer {
   height: 375px;
   background: #424451;
@@ -216,7 +217,7 @@ noBorderR {
 /* ============================================================================
  * Main Content - Overview - Header styling
  * ==========================================================================*/
-/* line 201, ../sass/style.scss */
+/* line 203, ../sass/style.scss */
 .overviewHeader {
   font-weight: bold;
   border-bottom: solid #505363 1px;
@@ -238,7 +239,7 @@ noBorderR {
   height: 50px;
 }
 
-/* line 217, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 .overviewHeader .headerMenu {
   border-right: solid #505363 1px;
   top: 0;
@@ -246,44 +247,44 @@ noBorderR {
   text-shadow: 1px 0 0 #1b1c22;
 }
 
-/* line 225, ../sass/style.scss */
+/* line 227, ../sass/style.scss */
 .overviewHeader .headerMenu li {
   border-right: solid #2b2d36 1px;
   border-left: solid #505363 1px;
 }
-/* line 230, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 .overviewHeader .headerMenu li .icon {
   position: absolute;
   left: 17px;
   width: 15px;
   height: 15px;
 }
-/* line 237, ../sass/style.scss */
+/* line 239, ../sass/style.scss */
 .overviewHeader .headerMenu li .headerOverview .icon {
   background: url(../../img/glyphicons-halflings-white.png) no-repeat -265px -24px;
 }
-/* line 240, ../sass/style.scss */
+/* line 242, ../sass/style.scss */
 .overviewHeader .headerMenu li .headerMilestones .icon {
   background: url(../../img/glyphicons-halflings-white.png) no-repeat -190px -120px;
 }
-/* line 244, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 .overviewHeader .headerMenu li .headerTasks .icon {
   background: url(../../img/glyphicons-halflings-white.png) no-repeat -264px 0;
 }
-/* line 247, ../sass/style.scss */
+/* line 249, ../sass/style.scss */
 .overviewHeader .headerMenu li .headerFiles .icon {
   background: url(../../img/glyphicons-halflings-white.png) no-repeat -26px -24px;
 }
-/* line 250, ../sass/style.scss */
+/* line 252, ../sass/style.scss */
 .overviewHeader .headerMenu li .headerMessages .icon {
   background: url(../../img/glyphicons-halflings-white.png) no-repeat -72px 0;
 }
-/* line 253, ../sass/style.scss */
+/* line 255, ../sass/style.scss */
 .overviewHeader .headerMenu li .headerCommunication .icon {
   background: url(../../img/glyphicons-halflings-white.png) no-repeat -168px 0;
 }
 
-/* line 260, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 .overviewHeader .headerMenu li.first {
   border-left: none;
   -moz-border-radius-topleft: 6px;
@@ -291,45 +292,45 @@ noBorderR {
   border-top-left-radius: 6px;
 }
 
-/* line 264, ../sass/style.scss */
+/* line 266, ../sass/style.scss */
 .overviewHeader .headerMenu li a:hover, .headerMenu li a:focus {
   background: #373844;
 }
 
-/* line 267, ../sass/style.scss */
+/* line 269, ../sass/style.scss */
 .overviewHeader .headerMenu li.active a:hover, .headerMenu li.active a:focus {
   background: transparent;
   cursor: default;
 }
 
-/* line 271, ../sass/style.scss */
+/* line 273, ../sass/style.scss */
 .overviewHeader .headerMenu li a.first {
   -moz-border-radius-topleft: 6px;
   -webkit-border-top-left-radius: 6px;
   border-top-left-radius: 6px;
 }
 
-/* line 275, ../sass/style.scss */
+/* line 277, ../sass/style.scss */
 .overviewHeader .headerMenu li a {
   padding: 17px 20px 17px 35px;
   color: #ebedf1;
   text-decoration: none;
 }
 
-/* line 281, ../sass/style.scss */
+/* line 283, ../sass/style.scss */
 .overviewHeaderBorder {
   width: 100%;
   height: 49px;
   border-bottom: solid #2b2d36 1px;
 }
 
-/* line 287, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 .overviewHeader .headerMenu li.active {
   background: #424451;
   border-bottom: solid 4px #424451;
 }
 
-/* line 291, ../sass/style.scss */
+/* line 293, ../sass/style.scss */
 .overviewHeader .headerMenu li a.active.first {
   -moz-border-radius-topleft: 6px;
   -webkit-border-top-left-radius: 6px;
@@ -339,82 +340,82 @@ noBorderR {
 /* ============================================================================
  * Main Content - Overview - Content styling
  * ==========================================================================*/
-/* line 299, ../sass/style.scss */
+/* line 301, ../sass/style.scss */
 .overviewContentTop {
   color: white;
   padding: 28px 35px;
 }
-/* line 303, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 .overviewContentTop .overviewBar1 div {
   float: left;
 }
-/* line 307, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 .overviewContentTop .overviewBar1 {
   text-shadow: 1px 0 0 #1b1c22;
   padding: 0 0 30px 0;
   border-bottom: solid 1px #525461;
   width: 100%;
 }
-/* line 313, ../sass/style.scss */
+/* line 315, ../sass/style.scss */
 .overviewContentTop .overviewBar1 .userName {
   padding-right: 25px;
   border-right: solid 1px #525461;
 }
-/* line 317, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 .overviewContentTop .overviewBar1 .userName h2 {
   font-weight: bold;
 }
-/* line 322, ../sass/style.scss */
+/* line 324, ../sass/style.scss */
 .overviewContentTop .overviewBar1 .title {
   padding-left: 25px;
 }
-/* line 325, ../sass/style.scss */
+/* line 327, ../sass/style.scss */
 .overviewContentTop .overviewBar1 .title h2 {
   font-weight: 200;
   color: #c5c7d2;
 }
-/* line 332, ../sass/style.scss */
+/* line 334, ../sass/style.scss */
 .overviewContentTop .overviewBar2 div {
   float: left;
 }
-/* line 336, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 .overviewContentTop .overviewBar2 {
   text-shadow: 1px 0 0 #1b1c22;
   padding: 30px 0 0 0;
 }
-/* line 340, ../sass/style.scss */
+/* line 342, ../sass/style.scss */
 .overviewContentTop .overviewBar2 p {
   margin-bottom: 1.3em;
 }
-/* line 343, ../sass/style.scss */
+/* line 345, ../sass/style.scss */
 .overviewContentTop .overviewBar2 .outer_col1 {
   width: 250px;
   border-right: solid 1px #525461;
 }
-/* line 347, ../sass/style.scss */
+/* line 349, ../sass/style.scss */
 .overviewContentTop .overviewBar2 .outer_col1 .statusLabel.inner_col1 {
   color: #c3d1d4;
   text-shadow: 1px 1px 0 #1b1c22;
 }
-/* line 351, ../sass/style.scss */
+/* line 353, ../sass/style.scss */
 .overviewContentTop .overviewBar2 .outer_col1 .statusField.inner_col2 {
   padding-left: 35px;
 }
-/* line 354, ../sass/style.scss */
+/* line 356, ../sass/style.scss */
 .overviewContentTop .overviewBar2 .outer_col1 .statusField.inner_col2 .clientName {
   color: #b3def5;
 }
-/* line 360, ../sass/style.scss */
+/* line 362, ../sass/style.scss */
 .overviewContentTop .overviewBar2 .outer_col2 {
   padding: 0 0 0 30px;
   width: 385px;
 }
-/* line 363, ../sass/style.scss */
+/* line 365, ../sass/style.scss */
 .overviewContentTop .overviewBar2 .outer_col2 .descBody {
   color: #c3d1d4;
 }
 
-/* line 370, ../sass/style.scss */
+/* line 372, ../sass/style.scss */
 .overviewContentBottom {
   height: 82px;
   color: white;
@@ -435,32 +436,32 @@ noBorderR {
   -o-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
 }
-/* line 383, ../sass/style.scss */
+/* line 385, ../sass/style.scss */
 .overviewContentBottom .overviewDateWrapper.outer_col1 {
   position: relative;
   padding: 28px 35px 0 35px;
 }
-/* line 388, ../sass/style.scss */
+/* line 390, ../sass/style.scss */
 .overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate h1, .overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate p {
   float: left;
 }
-/* line 391, ../sass/style.scss */
+/* line 393, ../sass/style.scss */
 .overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate h1.dayNumber {
   margin-right: 10px;
 }
-/* line 394, ../sass/style.scss */
+/* line 396, ../sass/style.scss */
 .overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate .daysLeftLabel {
   color: #c5c7d2;
 }
-/* line 399, ../sass/style.scss */
+/* line 401, ../sass/style.scss */
 .overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate .timeline.inner_col2 .timelineLabel {
   color: #c3d1d4;
 }
-/* line 402, ../sass/style.scss */
+/* line 404, ../sass/style.scss */
 .overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate .timeline.inner_col2 .timelineDate {
   font-weight: bold;
 }
-/* line 409, ../sass/style.scss */
+/* line 411, ../sass/style.scss */
 .overviewContentBottom .overviewDateWrapper.outer_col1 .overviewDate div {
   float: left;
 }
@@ -468,7 +469,24 @@ noBorderR {
 /* **************************************************************************
  * Sidebar Starts here
  * **************************************************************************/
-/* line 423, ../sass/style.scss */
+/* line 425, ../sass/style.scss */
 .sidebar {
   margin-left: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  height: 100%;
+  width: 225px;
+}
+
+/* line 435, ../sass/style.scss */
+.sidebar .userInfo {
+  height: 100%;
+  background: white;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
 }

@@ -1,6 +1,7 @@
 //SASS Variables
 $back_color: #ebedf0;//light blue background color
 $overview_border_radius: 6px;
+$default_border_radius: 6px;
 //SASS Import
 @import "compass";
 
@@ -175,6 +176,7 @@ noBorderR{
  * Main Content Starts here
  * **************************************************************************/
 .contentContainer{
+  height: 100%;
   position: relative;
   width: 1000px;
   margin: 40px auto;
@@ -422,7 +424,16 @@ noBorderR{
  * **************************************************************************/
 .sidebar{
   margin-left: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  height: 100%;
+  width: 225px;
+
 }
 .sidebar .userInfo{
-
+  height: 100%;
+  background: white;
+  @include border-radius($default_border_radius);
 }

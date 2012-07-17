@@ -1,0 +1,219 @@
+/* ==========================================================================
+ * Global Styling Changes
+ * ==========================================================================*/
+/* line 17, ../sass/style.scss */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ebedf0;
+  font-size: 13px;
+}
+
+/* line 23, ../sass/style.scss */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* line 27, ../sass/style.scss */
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* line 32, ../sass/style.scss */
+h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* line 37, ../sass/style.scss */
+h4 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* line 43, ../sass/style.scss */
+b {
+  font-weight: bold;
+}
+
+/* line 47, ../sass/style.scss */
+p {
+  line-height: 1.5em;
+}
+
+/* line 51, ../sass/style.scss */
+a {
+  color: #1B9EE0;
+}
+
+/* ==========================================================================
+ * Addtional Global Styling
+ * ==========================================================================*/
+/* line 61, ../sass/style.scss */
+.clear {
+  clear: both;
+}
+
+/* line 65, ../sass/style.scss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 74, ../sass/style.scss */
+.clearfix {
+  display: inline-block;
+}
+
+/* line 79, ../sass/style.scss */
+* html .clearfix {
+  height: 1%;
+}
+
+/* line 84, ../sass/style.scss */
+noBorderL {
+  border-left: none;
+}
+
+/* line 87, ../sass/style.scss */
+noBorderR {
+  border-left: none;
+}
+
+/* ==========================================================================
+ * Menu -Styling
+ * ==========================================================================*/
+/* line 95, ../sass/style.scss */
+.mainMenuWrapper {
+  background: white;
+  height: 100%;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 80px;
+}
+/* line 103, ../sass/style.scss */
+.mainMenuWrapper .mainMenu {
+  padding: 150px 0 0 0;
+}
+/* line 105, ../sass/style.scss */
+.mainMenuWrapper .mainMenu .nav ul {
+  /*General mainMenu list styling */
+  /* Active mainMenu list styling */
+}
+/* line 107, ../sass/style.scss */
+.mainMenuWrapper .mainMenu .nav ul li {
+  position: relative;
+  min-height: 70px;
+}
+/* line 110, ../sass/style.scss */
+.mainMenuWrapper .mainMenu .nav ul li p {
+  position: absolute;
+  right: 50px;
+  top: 15px;
+}
+/* line 118, ../sass/style.scss */
+.mainMenuWrapper .mainMenu .nav ul li .circle-outer {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+/* line 127, ../sass/style.scss */
+.mainMenuWrapper .mainMenu .nav ul li .circle-inner {
+  background: #00cccc;
+  margin: auto;
+  height: 20px;
+  width: 20px;
+  border: 3px solid grey;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 137, ../sass/style.scss */
+.mainMenuWrapper .mainMenu .nav ul li a:hover .circle-inner {
+  height: 26px;
+  width: 26px;
+  margin-top: -3px;
+}
+/* line 148, ../sass/style.scss */
+.mainMenuWrapper .mainMenu .nav ul li.active .circle-inner {
+  height: 26px;
+  width: 26px;
+  margin-top: -3px;
+}
+/* line 156, ../sass/style.scss */
+.mainMenuWrapper .mainMenu .nav ul li.blog .circle-inner {
+  background: #00cccc;
+}
+
+/* line 170, ../sass/style.scss */
+.main-wrapper {
+  width: 960px;
+  height: 100%;
+  margin: auto;
+}
+/* line 174, ../sass/style.scss */
+.main-wrapper .main {
+  margin: 30% auto;
+}
+/* line 176, ../sass/style.scss */
+.main-wrapper .main .name-wrapper {
+  background: white;
+  text-align: center;
+}
+/* line 182, ../sass/style.scss */
+.main-wrapper .main .name-wrapper .name {
+  margin-bottom: 30px;
+}
+/* line 184, ../sass/style.scss */
+.main-wrapper .main .name-wrapper .name h1 {
+  float: left;
+  font-size: 400%;
+}
+/* line 188, ../sass/style.scss */
+.main-wrapper .main .name-wrapper .name .alice {
+  color: #00CCCC;
+}
+/* line 191, ../sass/style.scss */
+.main-wrapper .main .name-wrapper .name .yuan {
+  color: #0099CC;
+}
+/* line 197, ../sass/style.scss */
+.main-wrapper .main .name-wrapper .slogan {
+  margin-bottom: 30px;
+}
+/* line 198, ../sass/style.scss */
+.main-wrapper .main .name-wrapper .slogan .program {
+  color: #ABCF00;
+}
+/* line 201, ../sass/style.scss */
+.main-wrapper .main .name-wrapper .slogan .design {
+  color: #FF004D;
+}
+/* line 204, ../sass/style.scss */
+.main-wrapper .main .name-wrapper .slogan .create {
+  color: #FF5900;
+}
+/* line 207, ../sass/style.scss */
+.main-wrapper .main .name-wrapper .slogan .innovate {
+  color: #6D00FF;
+}
+/* line 213, ../sass/style.scss */
+.main-wrapper .main .promotion {
+  margin: 200% 0 0 0;
+  text-align: center;
+}
+
+/* line 221, ../sass/style.scss */
+.footer {
+  text-align: center;
+}

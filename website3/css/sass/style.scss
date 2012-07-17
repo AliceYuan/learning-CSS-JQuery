@@ -1,0 +1,223 @@
+//SASS Variables
+$back_color: #ebedf0;//light blue background color
+$overview_border_radius: 6px;
+$back_pink: #EDBBCF; //EDBBBB
+
+
+$default-circle-color: #00CCCC;
+//SASS Import
+@import "compass";
+
+//=========================================================================
+
+
+/* ==========================================================================
+ * Global Styling Changes
+ * ==========================================================================*/
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  background: $back_color;//light blue
+  font-size: 13px;
+}
+
+h1{
+  font-size: 2em;
+  font-weight:bold;
+}
+h2{
+  font-size: 1.5em;
+  font-weight:bold;
+}
+
+h3{
+  font-size: 1.2em;
+  font-weight:bold;
+}
+
+h4{
+  font-size: 1em;
+  font-weight: bold;
+
+}
+
+b{
+  font-weight: bold;
+}
+
+p{
+  line-height: 1.5em;
+}
+
+a{
+  color: #1B9EE0;
+
+}
+
+/* ==========================================================================
+ * Addtional Global Styling
+ * ==========================================================================*/
+
+//clearfix
+.clear{
+  clear:both;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+
+* html .clearfix {
+	height: 1%;
+}
+
+//no border
+noBorderL{
+  border-left:none;
+}
+noBorderR{
+  border-left:none;
+}
+
+/* ==========================================================================
+ * Menu -Styling
+ * ==========================================================================*/
+
+.mainMenuWrapper{
+  background: white;
+  height: 100%;
+  right:0;
+  position:fixed;
+  top:0;
+  width: 80px;
+
+  .mainMenu{
+    padding: 150px 0 0 0;
+    .nav ul {
+      /*General mainMenu list styling */
+      li{
+        position: relative;
+        min-height: 70px;
+        p{
+          position: absolute;
+          right: 50px;
+          top: 15px;
+
+        }
+
+
+        .circle-outer{
+          width: 40px;
+          height: 30px;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+
+        }
+
+        .circle-inner{
+          background: $default-circle-color;
+          margin:   auto;
+          height:   20px;
+          width:    20px;
+          border:   3px solid grey;
+          @include border-radius( 50%);
+        }
+
+        a:hover{
+          .circle-inner{
+            height:26px;
+            width: 26px;
+            margin-top:-3px;
+          }
+        }
+      }
+
+      /* Active mainMenu list styling */
+
+      li.active{
+        .circle-inner{
+          height:26px;
+          width: 26px;
+          margin-top:-3px;
+        }
+      }
+
+      li.blog{
+        .circle-inner{
+          background: $default-circle-color;
+        }
+      }
+
+
+
+    }
+
+  }
+}
+
+
+
+.main-wrapper{
+  width: 960px;
+  height: 100%;
+  margin: auto;
+  .main{
+    margin: 30% auto;
+    .name-wrapper{
+      //width: 300px;
+      //height: 300px;
+      //border-radius: 50%;
+      background: white;
+      text-align: center;
+      .name{
+        margin-bottom: 30px;
+        h1{
+          float:left;
+          font-size: 400%;
+        }
+        .alice{
+          color:#00CCCC;
+        }
+        .yuan{
+          color:#0099CC;
+        }
+      }
+      .i{
+      }
+      .slogan{
+        .program{
+          color: #ABCF00;
+        }
+        .design{
+          color: #FF004D;
+        }
+        .create{
+          color: #FF5900;
+        }
+        .innovate{
+          color: #6D00FF;
+        }
+        margin-bottom: 30px;
+      }
+    }
+    .promotion{
+      margin: 200% 0 0 0;
+      text-align: center;
+    }
+  }
+
+
+}
+.footer{
+  text-align: center;
+}
