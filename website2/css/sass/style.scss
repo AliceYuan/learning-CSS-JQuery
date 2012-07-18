@@ -48,7 +48,9 @@ p{
 /* ==========================================================================
  * Addtional Global Styling
  * ==========================================================================*/
-
+.element-invisible{
+  display: hidden;
+}
 //clearfix
 .clear{
   clear:both;
@@ -73,13 +75,25 @@ p{
 }
 
 //no border
-noBorderL{
+.noBorderL{
   border-left:none;
 }
-noBorderR{
+.noBorderR{
   border-left:none;
 }
 
+.noIcon{
+  margin-left: 0;
+}
+
+.hasIcon{
+}
+
+.icon{
+  height:               15px;
+  width:                15px;
+  margin-right:         5px;
+}
 /* ==========================================================================
  * Header -General Styling
  * ==========================================================================*/
@@ -190,9 +204,8 @@ noBorderR{
  * Main Content - Overview styling
  * ==========================================================================*/
 .overviewContainer{
-  height: 375px;
+  height: 382px;
   background: #424451;
-  overflow:hidden;
   @include border-radius($overview_border_radius );
  }
 
@@ -220,40 +233,39 @@ noBorderR{
   border-right: solid #505363 1px;//lighter border
   top: 0;
   left: 0;
-  text-shadow: 1px 0 0 #1b1c22;
+  text-shadow: 0 -1px 0 #1b1c22;
 
 }
 
 .overviewHeader .headerMenu li {
-  border-right: solid #2b2d36 1px;//darker border
-  border-left: solid #505363 1px;//lighter border
-
-
+  border-right:               solid #2b2d36 1px;//darker border
+  border-left:                solid #505363 1px;//lighter border
+  height:                     49px;
   .icon{
-    position: absolute;
-    left:17px;
-    width: 15px;
-    height: 15px;
+    position:                 absolute;
+    left:                     17px;
+    width:                    15px;
+    height:                   15px;
   }
 
   .headerOverview .icon{
-    background: url(../../img/glyphicons-halflings-white.png) no-repeat -265px -24px;
+    background:               url(../../img/glyphicons-halflings-white.png) no-repeat -265px -26px;
   }
   .headerMilestones .icon{
-    background: url(../../img/glyphicons-halflings-white.png) no-repeat -190px -120px;
+    background:               url(../../img/glyphicons-halflings-white.png) no-repeat -190px -120px;
   }
 
   .headerTasks .icon{
-    background: url(../../img/glyphicons-halflings-white.png) no-repeat -264px 0 ;
+    background:               url(../../img/glyphicons-halflings-white.png) no-repeat -264px -2px ;
   }
   .headerFiles .icon{
-    background: url(../../img/glyphicons-halflings-white.png) no-repeat -26px -24px;
+    background:               url(../../img/glyphicons-halflings-white.png) no-repeat -26px -26px;
   }
   .headerMessages .icon{
-    background: url(../../img/glyphicons-halflings-white.png) no-repeat -72px 0;
+    background:               url(../../img/glyphicons-halflings-white.png) no-repeat -72px -2px;
   }
   .headerCommunication .icon{
-    background: url(../../img/glyphicons-halflings-white.png) no-repeat -168px 0;
+    background:               url(../../img/glyphicons-halflings-white.png) no-repeat -168px -2px;
   }
 
 }
@@ -307,13 +319,13 @@ noBorderR{
   }
 
   .overviewBar1{
-    text-shadow:            1px 0 0 #1b1c22;
+    text-shadow:            1px -1px 0 #1b1c22;
     padding:                0 0 30px 0;
     border-bottom:          solid 1px #525461;
     width:                  100%;
     position:               relative;
 
-    .userName{
+    .projectName{
       padding-right: 25px;
       border-right: solid 1px #525461;
 
@@ -334,6 +346,7 @@ noBorderR{
     .edit{
       background-color:       #1faeee; // Old browsers
       color:                  white;
+      font-size:              0.9em;
       font-weight:            bold;
       height:                 25px;
       position:               absolute;
@@ -367,16 +380,16 @@ noBorderR{
         }
         div{
           position:             absolute;
-            top:                1px;
+            top:                4px;
             left:               13px;
-          height:               17px;
-          width:                17px;
-          background:           url(../../img/glyphicons-halflings-white.png) no-repeat 0 -69px;
+          height:               15px;
+          width:                15px;
+          background:           url(../../img/glyphicons-halflings-white.png) no-repeat 0 -71px;
         }
         p{
           position:            absolute;
-            top:               2px;
-            right:             15px;
+            top:               4px;
+            right:             16px;
         }
       }
     }
@@ -387,7 +400,7 @@ noBorderR{
   }
 
   .overviewBar2{
-    text-shadow: 1px 0 0 #1b1c22;
+    text-shadow: 1px -1px 0 #1b1c22;
     padding: 30px 0 0 0;
     p{
       margin-bottom: 1.3em;
@@ -398,7 +411,7 @@ noBorderR{
 
       .statusLabel.innerCol1{
         color: #c3d1d4;
-        text-shadow: 1px 1px 0 #1b1c22;
+        text-shadow: 1px -1px 0 #1b1c22;
       }
       .statusField.innerCol2{
         padding-left: 35px;
@@ -420,10 +433,11 @@ noBorderR{
 }
 
 .overviewContentBottom{
-  height: 82px;
-  color: white;
-  border-top:  solid 1px #525461;
-  position: relative;
+  height:                 85px;
+  color:                  white;
+  border-top:             solid 1px #525461;
+  position:               relative;
+  text-shadow:            0 -1px 0 #121217;
 
   background-color: #2a2c34; // Old browsers
   @include filter-gradient(#2a2c34, #2a2c34, vertical); // IE6-8
@@ -442,7 +456,7 @@ noBorderR{
     .overviewDate{
       height:                   100%;
       position:                 relative;
-      margin:                   28px 35px 0 35px;
+      margin:                   28px 0 0 35px;
       h1,p{
         float:                  left;
       }
@@ -462,22 +476,22 @@ noBorderR{
       }
       .daysLeftLabel{
         color:                   #c5c7d2;
-        margin-top:              3px;
+        margin-top:              1px;
       }
 
       .timeline.innerCol2{
         font-size:                0.9em;
         padding-left:             15px;
-        margin-top:               11px;
+        margin-top:               10px;
         .timelineLabel{
-          color: #c3d1d4;
-          margin-right: 6px;
+          color:                  #c3d1d4;
+          margin-right:           6px;
         }
         .timelineDate{
-          font-weight:bold;
+          font-weight:            bold;
         }
         .dash{
-          margin: 0 4px;
+          margin:                 0 4px;
         }
       }
 
@@ -488,10 +502,111 @@ noBorderR{
     }
   }
   .overviewTab.outerCol2{
-    width: 317px;
-    height: 100%;
-    border-left: solid 1px #30323b;
-    float:left;
+    color:                        #C3D1D4;
+    width:                        319px;
+    height:                       100%;
+    border-left:                  solid 1px #30323b;
+    float:                        left;
+    z-index:                      5;
+
+    .firstTab{
+      .dropDownIcon{
+        background-color:         #4f515d;
+        position:                 absolute;
+          top:                    36px;
+          right:                  25px;
+        height:                   19px;
+        width:                    19px;
+
+        @include filter-gradient(#4f515d, #73757e, vertical);
+        $experimental-support-for-svg: true;
+        @include background-image(linear-gradient(top,  #4f515d 0%,#73757e 100%));
+        @include border-radius(50%);
+        @include box-shadow( 0 0 2px #1d2327, inset 0 -1px 1px #b0b1c0 );
+        a{
+          height:                 100%;
+          width:                  100%;
+          display:                block;
+          background:             url(../../img/up-down-arrow.png) no-repeat 1px 0;
+          @include border-radius(50%);
+          &:hover, &:focus{
+            @include box-shadow(inset 0 -1px 1px #b0b1c0 );
+          }
+          &:active{
+            background-color: #73757e;
+          }
+        }
+        &.up a{
+          background-position-y:    0px;
+        }
+        &.down a{
+          background-position-y:    -15px;
+        }
+      }
+    }
+
+    li{
+      height:                   84px;
+      width:                    319px;
+      border-bottom:            solid 1px #1e1e25;
+      border-top:               solid 1px #30323b;
+      background-color:         #2a2c34; // Old browsers
+      @include filter-gradient(#2a2c34, #2a2c34, vertical); // IE6-8
+      // IE9 SVG, needs conditional override of 'filter' to 'none'
+      $experimental-support-for-svg: true;
+      @include background-image(linear-gradient(top,  #2a2c34 0%,#2c2e37 52%,#2a2c34 100%));
+    }
+    li.drop{
+      display:none;
+    }
+    li.first.closed{
+      @include border-radius(0 0 $overview_border_radius 0 );
+    }
+    li.last{
+      @include border-radius(0 0 $overview_border_radius $overview_border_radius);
+    }
+    li .inner{
+      padding:                  22px 0 0 35px;
+      .line{
+        width:                  200px;
+        clear:                  both;
+      }
+      .line.line1{
+        .completion{
+          color:                white;
+          float:                right;
+          font-weight:          bold;
+        }
+      }
+      .line.line2.status-bar{
+        margin:                 5px 0;
+        height:                 5px;
+        background:             #535564;
+        overflow:               hidden;
+        @include border-radius(5px);
+        .completion{
+          background:           #f0f5f7;
+          height:               5px;
+          width:                0%;
+          //width:                50%;
+        }
+      }
+      .line.line3{
+        font-size:              0.9em;
+        .icon {
+          background:           url(../../img/glyphicons-halflings-white.png) no-repeat -335px -144px;
+        }
+        .status{
+          float:            right;
+        }
+        .status.warning{
+          color:            #ffb5ae ;
+        }
+      }
+      .line p, .line div {
+        float:              left;
+      }
+    }
   }
 
 }

@@ -9,6 +9,9 @@
     <link href="css/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/stylesheets/style.css">
     <link href="css/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.transit.js" ></script>
+    <script type="text/javascript" src="js/global.js"></script>
     <!--[if IE]>
         <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
@@ -83,9 +86,9 @@
 
           <div class="overviewContentTop">
             <div class="overviewBar1 clearfix">
-              <div class="userName"><h2> Alice Yuan </h2></div>
+              <div class="projectName"><h2> Project Downsview </h2></div>
               <div class="title"><h2> Project Overview</h2></div>
-              <div class="edit"><a href="#"><div></div><p>Edit<p></a></div>
+              <div class="edit"><a href="#" title="edit project"><div class="icon"></div><p>Edit<p></a></div>
             </div>
 
             <div class="overviewBar2 clearfix">
@@ -127,6 +130,92 @@
               </div>
             </div>
             <div class="overviewTab outerCol2 clearfix">
+              <div class="firstTab">
+                <div class="dropDownIcon up">
+                  <a href="#"> </a>
+                </div>
+
+              </div>
+              <div class="dropDown">
+                <ul>
+                  <li class="first row1 closed">
+                    <div class="inner">
+                      <h5 class="line line1 noIcon">
+                        <p class="title noIcon">General Progress </p> <p class="completion 81">81% </p>
+                      </h5>
+                      <div class="line line2 status-bar"><div class="completion 81"></div> </div>
+                      <div class="line line3"><div class="icon currency"></div>
+                        <div class="budget hasIcon">
+                          <p class="numberator">5000</p>
+                          <p class="denominator">/100000</p>
+                        </div>
+                          <p class="status"> On Budget </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="row2 drop hidden">
+                    <div class="inner">
+                      <h5 class="line line1 noIcon">
+                        <p class="title noIcon">Development</p> <p class="completion 21">21% </p>
+                      </h5>
+                      <div class="line line2 status-bar"><div class="completion 21"></div> </div>
+                      <div class="line line3"><div class="icon currency"></div>
+                        <div class="budget hasIcon">
+                          <p class="numberator">25000</p>
+                          <p class="denominator">/36000</p>
+                        </div>
+                          <p class="status"> On Budget </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="row3 drop hidden">
+                  <div class="inner">
+                      <h5 class="line line1 noIcon">
+                        <p class="title noIcon">Web Design </p> <p class="completion 56">56% </p>
+                      </h5>
+                      <div class="line line2 status-bar"><div class="completion 56"></div> </div>
+                      <div class="line line3"><div class="icon currency"></div>
+                        <div class="budget hasIcon">
+                          <p class="numberator">9700</p>
+                          <p class="denominator">/6400</p>
+                        </div>
+                          <p class="status"> On Budget </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="row4 drop hidden">
+                  <div class="inner">
+                      <h5 class="line line1 noIcon">
+                        <p class="title noIcon">Administrative & Business </p> <p class="completion 75">75% </p>
+                      </h5>
+                      <div class="line line2 status-bar"><div class="completion 75"></div> </div>
+                      <div class="line line3"><div class="icon currency"></div>
+                        <div class="budget hasIcon">
+                          <p class="numberator">45000</p>
+                          <p class="denominator">/230000</p>
+                        </div>
+                          <p class="status warning"> Warning Stuff</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="last row5 drop hidden">
+                  <div class="inner">
+                      <h5 class="line line1 noIcon">
+                        <p class="title noIcon">Miscellaneous</p> <p class="completion 5">5% </p>
+                      </h5>
+                      <div class="line line2 status-bar"><div class="completion 5"></div> </div>
+                      <div class="line line3"><div class="icon currency"></div>
+                        <div class="budget hasIcon">
+                          <p class="numberator">9000</p>
+                          <p class="denominator">/24000</p>
+                        </div>
+                          <p class="status"> On Budget </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
             </div>
           </div>
 
