@@ -502,6 +502,9 @@ p{
     }
   }
   .overviewTab.outerCol2{
+    position:                     absolute;
+      top:                        0;
+      right:                      0;
     color:                        #C3D1D4;
     width:                        319px;
     height:                       100%;
@@ -629,4 +632,24 @@ p{
   height: 100%;
   background: white;
   @include border-radius($default_border_radius);
+  .topRow{
+    @include border-radius($default_border_radius $default_border_radius 0 0);
+    height:                 80px;
+    background:             #535564;
+    .topRowInner{
+      padding:                 22px 0 0 15px;
+      text-shadow:             0 -1px 0 #1b1c22;
+      color:                   #c5c7d2;
+      h1{
+        color:                  white;
+        font-size:              1.3em;
+        font-weight:            bold;
+        margin-bottom:          8px;
+      }
+      h2{
+        font-weight:            normal;
+        font-size:              0.9em;
+      }
+    }
+  }
 }
