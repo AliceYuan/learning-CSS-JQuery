@@ -12,22 +12,33 @@ $default-circle-color: #00CCCC;
 //=========================================================================
 
 
+/* =========================================================================
+ * Typography - Font Face
+ * ==========================================================================*/
+
+
 /* ==========================================================================
  * Global Styling Changes
  * ==========================================================================*/
 body {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: QuicksandBookRegular, Arial, Helvetica, sans-serif;
   background: $back_color;//light blue
   font-size: 13px;
 }
 
 h1{
   font-size: 2em;
-  font-weight:bold;
+  font-family: WindsongRegular;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
 }
 h2{
   font-size: 1.5em;
-  font-weight:bold;
 }
 
 h3{
