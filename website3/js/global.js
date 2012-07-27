@@ -8,7 +8,7 @@ $(document).ready(function(){
   }else{
     $(".main-menu-wrapper").addClass("right").removeClass("top");
     $(".main-menu-wrapper .main-menu .nav").css({
-      "padding": $(window).height()/11+"px 0 ",
+      "padding": $(window).height()/7+"px 0 ",
     });
   }
 
@@ -23,7 +23,7 @@ $(document).ready(function(){
     }else{
       $(".main-menu-wrapper").addClass("right").removeClass("top");
       $(".main-menu-wrapper .main-menu .nav").css({
-        "padding": $(window).height()/11+"px 0 ",
+        "padding": $(window).height()/7+"px 0 ",
       });
     }
   });
