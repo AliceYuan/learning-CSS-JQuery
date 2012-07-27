@@ -12,10 +12,27 @@
     <link rel="stylesheet" href="css/stylesheets/print.css" media="print"  type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/jquery.transit.js" ></script>
+    <script type="text/javascript" src="js/jquery.fittext.js"></script>
     <script type="text/javascript" src="js/global.js"></script>
+    <script>
 
-    <script type="text/javascript" >
+  if (screen.height > screen.width){
+    console.log(screen.height);
+    alert("whaaa");
+    $(".main-menu-wrapper").css({
+      "left":"0",
+      "top":"0",
+      "height":"6.92307692em",
+      "width":"100%",
+    });
+    $(".main-menu-wrapper li").css({
+      "float":"left",
+    });
+    $(".main-menu-wrapper .main-menu").css({
+      "padding":"0 0 0 10em",
+    });
 
+  }
     </script>
     <!--[if IE]>
         <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -136,4 +153,5 @@
     </div>
 
   </body>
+
 </html>

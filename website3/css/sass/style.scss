@@ -27,7 +27,7 @@ body {
 }
 
 h1{
-  font-size: 2em;
+  // font-size: 2em;
   font-family: WindsongRegular;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -104,25 +104,54 @@ a{
  * Menu -Styling
  * ==========================================================================*/
 
+.main-menu-wrapper.top{
+  left:0;
+  top:0;
+  height: 6.92307692em;
+  width: 100%;
+  .main-menu .nav{
+  }
+  li{
+    float:left;
+    width: 11%;
+    max-width: 90px;
+  }
+}
+.main-menu-wrapper.right{
+  top:0;
+  right: 0;
+  width: 6.92307692em;
+  height: 100%;
+  .main-menu .nav{
+  }
+  li{
+    float:none;
+    height: 9%;
+  }
+}
 .main-menu-wrapper{
   background: white;
   // border-left: solid 3px #B8B8B8;
-  height: 100%;
-  right:0;
   position:fixed;
-  top:0;
-  width: 90px;
   font-size: 1.0em;
 
   @include box-shadow(-5px 0 5px #B8B8B8);
 
   .main-menu{
-    padding: 150px 0 0 0;
+    height: 100%;
+    width: 100%;
+    .nav{
+      height: 100%;
+      width: 100%;
+    }
     .nav ul {
+      height: 100%;
+      width: 100%;
       /*General main-menu list styling */
       li{
         position: relative;
-        min-height: 70px;
+        min-height: 60px;
+        min-width: 55px;
         //pseudoclasses
         &:hover p{
           right: 75px;
@@ -260,7 +289,8 @@ a{
 
 
 .main-wrapper{
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   height: 100%;
   margin: auto;
   .main{
@@ -287,6 +317,7 @@ a{
      *      Index Page styling
      * ==================================================================================*/
     .name-wrapper{
+      width: 100%;
       margin: 30% auto 0 auto;
       //width: 300px;
       //height: 300px;
@@ -294,10 +325,11 @@ a{
       background: transparent;
       text-align: center;
       .name{
+        width: 100%;
         margin-bottom: 30px;
         h1{
           float:left;
-          font-size: 20em;
+          font-size: 100%*20;
         }
         .alice{
           color:black;//#00CCCC;
