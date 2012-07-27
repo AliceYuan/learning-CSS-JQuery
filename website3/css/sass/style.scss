@@ -327,6 +327,7 @@ a{
       .name{
         width: 100%;
         margin-bottom: 30px;
+        position: relative;
         h1{
           float:left;
           font-size: 100%*20;
@@ -337,6 +338,13 @@ a{
         }
         .yuan{
           color:black;//#0099CC;
+        }
+        .underline{
+          position: absolute;
+          top: 60%;
+          width: 0%;
+          border-bottom: 5px solid $default-circle-color;
+          z-index: -1;
         }
       }
       .i{

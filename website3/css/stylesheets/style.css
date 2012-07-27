@@ -301,54 +301,63 @@ a {
 .main-wrapper .main .name-wrapper .name {
   width: 100%;
   margin-bottom: 30px;
+  position: relative;
 }
-/* line 330, ../sass/style.scss */
+/* line 331, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .name h1 {
   float: left;
   font-size: 2000%;
 }
-/* line 334, ../sass/style.scss */
+/* line 335, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .name .alice {
   color: black;
   padding-right: 0.2em;
 }
-/* line 338, ../sass/style.scss */
+/* line 339, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .name .yuan {
   color: black;
 }
-/* line 344, ../sass/style.scss */
+/* line 342, ../sass/style.scss */
+.main-wrapper .main .name-wrapper .name .underline {
+  position: absolute;
+  top: 60%;
+  width: 0%;
+  border-bottom: 5px solid #00cccc;
+  z-index: -1;
+}
+/* line 352, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .slogan {
   float: right;
   margin-bottom: 30px;
 }
-/* line 346, ../sass/style.scss */
+/* line 354, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .slogan h2 {
   float: left;
   padding-left: 10px;
 }
-/* line 350, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .slogan .program {
   color: #ABCF00;
 }
-/* line 353, ../sass/style.scss */
+/* line 361, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .slogan .design {
   color: #FF004D;
 }
-/* line 356, ../sass/style.scss */
+/* line 364, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .slogan .create {
   color: #FF5900;
 }
-/* line 359, ../sass/style.scss */
+/* line 367, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .slogan .innovate {
   color: #6D00FF;
 }
-/* line 365, ../sass/style.scss */
+/* line 373, ../sass/style.scss */
 .main-wrapper .main .promotion {
   margin: 200% 0 0 0;
   text-align: center;
 }
 
-/* line 373, ../sass/style.scss */
+/* line 381, ../sass/style.scss */
 .footer {
   text-align: center;
 }

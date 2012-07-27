@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+  $(".main-wrapper").delay(200).fadeIn(1200,'swing');
+  $(".name .underline").delay(1500).animate({
+    "width":"90%",
+  },2000,'swing');
+
+
+
   if ($(window).height() > $(window).width()){
     $(".main-menu-wrapper").addClass("top").removeClass("right");
     $(".main-menu-wrapper .main-menu .nav").css({
