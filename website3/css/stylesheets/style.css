@@ -4,14 +4,15 @@
 /* ==========================================================================
  * Global Styling Changes
  * ==========================================================================*/
-/* line 23, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 body {
   font-family: QuicksandBookRegular, Arial, Helvetica, sans-serif;
-  background: transparent;
+  background: #94cdcb;
   font-size: 13px;
+  color: white;
 }
 
-/* line 29, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
 h1 {
   font-family: WindsongRegular;
   -webkit-touch-callout: none;
@@ -23,34 +24,34 @@ h1 {
   cursor: default;
 }
 
-/* line 40, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 h2 {
   font-size: 1.5em;
 }
 
-/* line 44, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 h3 {
   font-size: 1.2em;
   font-weight: bold;
 }
 
-/* line 49, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 h4 {
   font-size: 1em;
   font-weight: bold;
 }
 
-/* line 55, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 b {
   font-weight: bold;
 }
 
-/* line 59, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 p {
   line-height: 1.5em;
 }
 
-/* line 63, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 a {
   color: #1B9EE0;
 }
@@ -58,12 +59,12 @@ a {
 /* ==========================================================================
  * Addtional Global Styling
  * ==========================================================================*/
-/* line 73, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 .clear {
   clear: both;
 }
 
-/* line 77, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -73,22 +74,22 @@ a {
   height: 0;
 }
 
-/* line 86, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 .clearfix {
   display: inline-block;
 }
 
-/* line 91, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 96, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .noBorderL {
   border-left: none;
 }
 
-/* line 99, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
 .noBorderR {
   border-left: none;
 }
@@ -96,34 +97,36 @@ a {
 /* ==========================================================================
  * Menu -Styling
  * ==========================================================================*/
-/* line 107, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 .main-menu-wrapper.top {
   left: 0;
   top: 0;
-  height: 6.92307692em;
+  max-height: 6.92307692em;
+  min-height: 4em;
   width: 100%;
 }
-/* line 114, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 .main-menu-wrapper.top li {
   float: left;
   width: 11%;
   max-width: 90px;
 }
 
-/* line 120, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 .main-menu-wrapper.right {
   top: 0;
   right: 0;
-  width: 6.92307692em;
+  max-width: 6.92307692em;
+  min-width: 3em;
   height: 100%;
 }
-/* line 127, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 .main-menu-wrapper.right li {
   float: none;
   height: 8%;
 }
 
-/* line 132, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 .main-menu-wrapper {
   background: white;
   position: fixed;
@@ -132,17 +135,17 @@ a {
   -moz-box-shadow: -5px 0 5px #b8b8b8;
   box-shadow: -5px 0 5px #b8b8b8;
 }
-/* line 140, ../sass/style.scss */
+/* line 144, ../sass/style.scss */
 .main-menu-wrapper .main-menu {
   height: 100%;
   width: 100%;
 }
-/* line 143, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 .main-menu-wrapper .main-menu .nav {
   height: 100%;
   width: 100%;
 }
-/* line 147, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 .main-menu-wrapper .main-menu .nav ul {
   height: 100%;
   width: 100%;
@@ -150,25 +153,26 @@ a {
   /* Active main-menu list styling */
   /* icons for menu */
 }
-/* line 151, ../sass/style.scss */
+/* line 155, ../sass/style.scss */
 .main-menu-wrapper .main-menu .nav ul li {
   position: relative;
-  min-height: 60px;
-  min-width: 55px;
+  min-height: 50px;
+  min-width: 50px;
 }
-/* line 156, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 .main-menu-wrapper .main-menu .nav ul li:hover p {
   right: 75px;
   color: white;
   background: grey;
 }
-/* line 161, ../sass/style.scss */
+/* line 165, ../sass/style.scss */
 .main-menu-wrapper .main-menu .nav ul li:hover .circle-inner {
   height: 40px;
   width: 40px;
-  margin-top: -5px;
+  top: 2px;
+  right: 0px;
 }
-/* line 170, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 .main-menu-wrapper .main-menu .nav ul li p {
   color: transparent;
   position: absolute;
@@ -188,18 +192,17 @@ a {
   -o-transition: right 1s, color 0.5s, background 0.5s 0.2s;
   transition: right 1s, color 0.5s, background 0.5s 0.2s;
 }
-/* line 183, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 .main-menu-wrapper .main-menu .nav ul li .circle-outer {
-  height: 40px;
-  width: 60px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
-/* line 192, ../sass/style.scss */
+/* line 197, ../sass/style.scss */
 .main-menu-wrapper .main-menu .nav ul li .circle-inner {
   background: #00cccc;
-  margin: auto;
+  margin: 0 2px;
   height: 30px;
   width: 30px;
   border: 3px solid grey;
@@ -208,71 +211,50 @@ a {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  -webkit-transition: height 0.6s, width 0.6s, margin-top 0.6s;
-  -moz-transition: height 0.6s, width 0.6s, margin-top 0.6s;
-  -o-transition: height 0.6s, width 0.6s, margin-top 0.6s;
-  transition: height 0.6s, width 0.6s, margin-top 0.6s;
+  -webkit-transition: height 0.6s, width 0.6s, right 0.6s, top 0.6s;
+  -moz-transition: height 0.6s, width 0.6s, right 0.6s, top 0.6s;
+  -o-transition: height 0.6s, width 0.6s, right 0.6s, top 0.6s;
+  transition: height 0.6s, width 0.6s, right 0.6s, top 0.6s;
+  position: absolute;
+  top: 7px;
+  right: 5px;
 }
-/* line 207, ../sass/style.scss */
+/* line 209, ../sass/style.scss */
+.main-menu-wrapper .main-menu .nav ul li img {
+  margin: auto;
+  z-index: 2;
+}
+/* line 219, ../sass/style.scss */
 .main-menu-wrapper .main-menu .nav ul li.active .circle-inner {
   height: 40px;
   width: 40px;
-  margin-top: -5px;
+  right: 0px;
+  top: 2px;
 }
-/* line 220, ../sass/style.scss */
-.main-menu-wrapper .main-menu .nav ul li.about img {
-  width: 18px;
-  height: 16px;
-  padding-top: 2px;
-}
-/* line 229, ../sass/style.scss */
-.main-menu-wrapper .main-menu .nav ul li.blog img {
-  width: 18px;
-  height: 18px;
-  margin: -2px;
-}
-/* line 244, ../sass/style.scss */
-.main-menu-wrapper .main-menu .nav ul li.projects img {
-  width: 20px;
-  height: 20px;
-  margin: -2px;
-}
-/* line 253, ../sass/style.scss */
-.main-menu-wrapper .main-menu .nav ul li.resume img {
-  padding: 1px 1px;
-}
-/* line 262, ../sass/style.scss */
-.main-menu-wrapper .main-menu .nav ul li .icon-big {
+/* line 275, ../sass/style.scss */
+.main-menu-wrapper .main-menu .nav ul li .icon {
   position: absolute;
-  right: 18px;
-  top: 6px;
-}
-/* line 267, ../sass/style.scss */
-.main-menu-wrapper .main-menu .nav ul li .icon-small {
-  position: absolute;
-  right: 21px;
-  top: 9px;
 }
 
-/* line 280, ../sass/style.scss */
+/* line 286, ../sass/style.scss */
 .social li {
   margin: 10px 20px;
   float: left;
 }
-/* line 283, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 .social li img {
   width: 50px;
   height: 50px;
 }
 
-/* line 291, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 .main-wrapper {
   width: 100%;
   max-width: 960px;
   height: 100%;
   margin: auto;
 }
-/* line 296, ../sass/style.scss */
+/* line 302, ../sass/style.scss */
 .main-wrapper .main {
   /* ==================================================================================
    *      Non Index Pages styling
@@ -281,43 +263,43 @@ a {
    *      Index Page styling
    * ==================================================================================*/
 }
-/* line 303, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 .main-wrapper .main .header .title {
   font-size: 14em;
   float: left;
 }
-/* line 307, ../sass/style.scss */
+/* line 313, ../sass/style.scss */
 .main-wrapper .main .header .sub-title {
   font-size: 5em;
 }
-/* line 319, ../sass/style.scss */
+/* line 325, ../sass/style.scss */
 .main-wrapper .main .name-wrapper {
   width: 100%;
   margin: 30% auto 0 auto;
   background: transparent;
   text-align: center;
 }
-/* line 327, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .name {
   width: 100%;
   margin-bottom: 30px;
   position: relative;
 }
-/* line 331, ../sass/style.scss */
+/* line 337, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .name h1 {
   float: left;
   font-size: 2000%;
 }
-/* line 335, ../sass/style.scss */
+/* line 341, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .name .alice {
-  color: black;
+  color: white;
   padding-right: 0.2em;
 }
-/* line 339, ../sass/style.scss */
+/* line 345, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .name .yuan {
-  color: black;
+  color: white;
 }
-/* line 342, ../sass/style.scss */
+/* line 348, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .name .underline {
   position: absolute;
   top: 60%;
@@ -325,39 +307,39 @@ a {
   border-bottom: 5px solid #00cccc;
   z-index: -1;
 }
-/* line 352, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .slogan {
   float: right;
   margin-bottom: 30px;
 }
-/* line 354, ../sass/style.scss */
+/* line 360, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .slogan h2 {
   float: left;
   padding-left: 10px;
 }
-/* line 358, ../sass/style.scss */
+/* line 364, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .slogan .program {
   color: #ABCF00;
 }
-/* line 361, ../sass/style.scss */
+/* line 367, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .slogan .design {
   color: #FF004D;
 }
-/* line 364, ../sass/style.scss */
+/* line 370, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .slogan .create {
   color: #FF5900;
 }
-/* line 367, ../sass/style.scss */
+/* line 373, ../sass/style.scss */
 .main-wrapper .main .name-wrapper .slogan .innovate {
   color: #6D00FF;
 }
-/* line 373, ../sass/style.scss */
+/* line 379, ../sass/style.scss */
 .main-wrapper .main .promotion {
   margin: 200% 0 0 0;
   text-align: center;
 }
 
-/* line 381, ../sass/style.scss */
+/* line 387, ../sass/style.scss */
 .footer {
   text-align: center;
 }

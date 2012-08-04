@@ -1,7 +1,8 @@
 //SASS Variables
-$back_color: transparent;//light blue background color
+$back_color: transparent;
 $overview_border_radius: 6px;
 $back_pink: #EDBBCF; //EDBBBB
+$back_color_front: #94CDCB;
 
 $hover-circle-size: 40px;
 $default-circle-size: 30px;
@@ -22,8 +23,9 @@ $default-circle-color: #00CCCC;
  * ==========================================================================*/
 body {
   font-family: QuicksandBookRegular, Arial, Helvetica, sans-serif;
-  background: $back_color;//light blue
+  background: $back_color_front;//light blue
   font-size: 13px;
+  color: white;
 }
 
 h1{
@@ -107,7 +109,8 @@ a{
 .main-menu-wrapper.top{
   left:0;
   top:0;
-  height: 6.92307692em;
+  max-height: 6.92307692em;
+  min-height: 4em;
   width: 100%;
   .main-menu .nav{
   }
@@ -120,7 +123,8 @@ a{
 .main-menu-wrapper.right{
   top:0;
   right: 0;
-  width: 6.92307692em;
+  max-width: 6.92307692em;
+  min-width: 3em;
   height: 100%;
   .main-menu .nav{
   }
@@ -135,7 +139,7 @@ a{
   position:fixed;
   font-size: 1.0em;
 
-  @include box-shadow(-5px 0 5px #B8B8B8);
+  //@include box-shadow(-5px 0 5px #B8B8B8);
 
   .main-menu{
     height: 100%;
@@ -150,8 +154,8 @@ a{
       /*General main-menu list styling */
       li{
         position: relative;
-        min-height: 60px;
-        min-width: 55px;
+        min-height: 50px;
+        min-width: 50px;
         //pseudoclasses
         &:hover p{
           right: 75px;
@@ -161,7 +165,9 @@ a{
         &:hover .circle-inner{
           height:   $hover-circle-size;
           width:    $hover-circle-size;
-          margin-top:-5px;
+          top:      2px;
+          right:    0px;
+
 
         }
 
@@ -181,22 +187,28 @@ a{
 
 
         .circle-outer{
-          height:   $default-circle-size + 10px;
-          width:    $default-circle-size + 30px;
-          position: absolute;
-          right: 10px;
-          top: 10px;
+          display:  table;
+          height:   100%;
+          width:    100%;
+          position: relative;
 
         }
 
         .circle-inner{
           background: $default-circle-color;
-          margin:   auto;
+          margin:   0 2px;
           height:   $default-circle-size;
           width:    $default-circle-size;
           border:   3px solid grey;
-          @include border-radius( 50%);
-          @include transition( height 0.6s, width 0.6s, margin-top 0.6s );
+          @include  border-radius( 50%);
+          @include  transition( height 0.6s, width 0.6s, right 0.6s, top 0.6s );
+          position: absolute;
+          top:      7px;
+          right:    5px;
+        }
+        img{
+          margin: auto;
+          z-index: 2;
         }
 
       }
@@ -207,34 +219,37 @@ a{
         .circle-inner{
           height:   $hover-circle-size;
           width:    $hover-circle-size;
-          margin-top:-5px;
+          right:    0px;
+          top:      2px;
         }
+        img{
+        }
+      }
+      li{
       }
 
       /* icons for menu */
       li.home{
         .circle-inner{
         }
+        img{
+        }
       }
       li.about{
         img{
-          width: 18px;
-          height: 16px;
-          padding-top: 2px;
         }
         .circle-inner{
         }
       }
       li.blog{
         img{
-          width: 18px;
-          height: 18px;
-          margin: -2px;
         }
         .circle-inner{
         }
       }
       li.artworks{
+        img{
+        }
         .circle-inner{
         }
       }
@@ -242,32 +257,23 @@ a{
         .circle-inner{
         }
         img{
-          width: 20px;
-          height: 20px;
-          margin: -2px;
         }
       }
       li.resume{
         .circle-inner{
         }
         img{
-          padding: 1px 1px;
         }
       }
       li.contact{
         .circle-inner{
         }
+        img{
+        }
       }
 
-      li .icon-big{
+      li .icon{
         position: absolute;
-        right: 18px;
-        top: 6px;
-      }
-      li .icon-small{
-        position: absolute;
-        right: 21px;
-        top: 9px;
       }
 
 
@@ -333,11 +339,11 @@ a{
           font-size: 100%*20;
         }
         .alice{
-          color:black;//#00CCCC;
+          color:white;//#00CCCC;
           padding-right: 0.2em;
         }
         .yuan{
-          color:black;//#0099CC;
+          color:white;//#0099CC;
         }
         .underline{
           position: absolute;
