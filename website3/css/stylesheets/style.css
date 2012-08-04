@@ -131,9 +131,6 @@ a {
   background: white;
   position: fixed;
   font-size: 1.0em;
-  -webkit-box-shadow: -5px 0 5px #b8b8b8;
-  -moz-box-shadow: -5px 0 5px #b8b8b8;
-  box-shadow: -5px 0 5px #b8b8b8;
 }
 /* line 144, ../sass/style.scss */
 .main-menu-wrapper .main-menu {

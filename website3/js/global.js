@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
   //On windows load do this:
+  $(".main-wrapper").delay(200).fadeIn(1200,'swing');
 
   centerIcons();
   dynamicMenu();
@@ -25,15 +26,20 @@ function centerIcons(){
   // var $liW = $(".main-menu li").width();
   // var $liH = $(".main-menu li").height();
 
-  var $liSize = $(".main-menu .nav li").width();
+  var $liSize = $(".main-menu .nav li").size();
   var $liW = $(".main-menu .nav li").width();
   var $liH = $(".main-menu .nav li").height();
+  console.log($liW, $liH);
   $(".main-menu ul li").each( function($index) {
+    $(this).find(".circle-inner").css({
+
+    });
     $(this).find("img.icon").load( function () {
       var $iconW = $(this).width()*0.55;
       var $iconH = $(this).height()*0.55;
       var $padH = (($liH - $iconH)/2);
       var $padW = (($liW - $iconW)/2);
+      console.log($liW, $liH, $iconW, $iconH);
       $(this).css({
         "width": $iconW+"px",
         "height": $iconH+"px",
