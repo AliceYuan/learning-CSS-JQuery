@@ -2,7 +2,11 @@
 $back_color: transparent;
 $overview_border_radius: 6px;
 $back_pink: #EDBBCF; //EDBBBB
-$back_color_front: #94CDCB;
+$back_color_front: #94CDCB; //light blue
+$back_color_art: #BB99EE; //light purple
+$back_color_projects: #EE8855;//orange
+// #77CC66 light green
+
 
 $hover-circle-size: 40px;
 $default-circle-size: 30px;
@@ -26,6 +30,8 @@ body {
   background: $back_color_front;//light blue
   font-size: 13px;
   color: white;
+  min-width: 320px;
+  min-height: 320px;
 }
 
 h1{
@@ -64,7 +70,7 @@ p{
 
 a{
   color: #1B9EE0;
-
+  text-decoration: none;
 }
 
 /* ==========================================================================
@@ -112,12 +118,21 @@ a{
   max-height: 6.92307692em;
   min-height: 4em;
   width: 100%;
-  .main-menu .nav{
+  .main-menu{
+    min-width: 320px;
   }
   li{
     float:left;
     width: 11%;
     max-width: 90px;
+  }
+  p{
+    left: -20%;
+    bottom: 0px;
+    @include transition( bottom 1s, color 0.5s, background 0.5s 0.2s);
+  }
+  a:hover p{
+    bottom: -25px;
   }
 }
 .main-menu-wrapper.right{
@@ -126,11 +141,19 @@ a{
   max-width: 6.92307692em;
   min-width: 3em;
   height: 100%;
-  .main-menu .nav{
+  .main-menu{
   }
   li{
     float:none;
     height: 8%;
+  }
+  p{
+    right: 10px;
+    top: 15px;
+    @include transition( right 1s, color 0.5s, background 0.5s 0.2s);
+  }
+  a:hover p{
+    right: 60px;
   }
 }
 .main-menu-wrapper{
@@ -138,9 +161,6 @@ a{
   // border-left: solid 3px #B8B8B8;
   position:fixed;
   font-size: 1.0em;
-
-  //@include box-shadow(-5px 0 5px #B8B8B8);
-
   .main-menu{
     height: 100%;
     width: 100%;
@@ -155,60 +175,51 @@ a{
       li{
         position: relative;
         min-height: 50px;
-        min-width: 50px;
+        min-width: 55px;
+
         //pseudoclasses
-        &:hover p{
-          right: 75px;
+        a:hover p{
           color: white;
           background: grey;
         }
-        &:hover .circle-inner{
+        a:hover .circle-inner{
           height:   $hover-circle-size;
           width:    $hover-circle-size;
           top:      2px;
-          right:    0px;
-
-
+          left:    0px;
         }
-
-
-
         p{
           color: transparent;
           position: absolute;
-          right: 10px;
-          top: 15px;
           background: transparent;
           height: 20px;
           padding: 3px 10px;
           @include border-radius(10px);
-          @include transition( right 1s, color 0.5s, background 0.5s 0.2s);
         }
-
-
         .circle-outer{
           display:  table;
           height:   100%;
           width:    100%;
           position: relative;
-
+          img.icon{
+            z-index:  1;
+            position: absolute;
+            left:     0;
+            top:      0;
+          }
         }
 
         .circle-inner{
           background: $default-circle-color;
-          margin:   0 2px;
-          height:   $default-circle-size;
-          width:    $default-circle-size;
-          border:   3px solid grey;
-          @include  border-radius( 50%);
-          @include  transition( height 0.6s, width 0.6s, right 0.6s, top 0.6s );
-          position: absolute;
-          top:      7px;
-          right:    5px;
-        }
-        img{
-          margin: auto;
-          z-index: 2;
+          margin:     0 7px;
+          height:     $default-circle-size;
+          width:      $default-circle-size;
+          border:     3px solid grey;
+          @include    border-radius( 50%);
+          @include    transition( height 0.6s, width 0.6s, left 0.6s, top 0.6s );
+          position:   absolute;
+          top:        7px;
+          left:       5px;
         }
 
       }
@@ -219,7 +230,7 @@ a{
         .circle-inner{
           height:   $hover-circle-size;
           width:    $hover-circle-size;
-          right:    0px;
+          left:    0px;
           top:      2px;
         }
         img{
@@ -229,66 +240,64 @@ a{
       }
 
       /* icons for menu */
-      li.home{
-        .circle-inner{
-        }
-        img{
-        }
-      }
-      li.about{
-        img{
-        }
-        .circle-inner{
-        }
-      }
-      li.blog{
-        img{
-        }
-        .circle-inner{
-        }
-      }
-      li.artworks{
-        img{
-        }
-        .circle-inner{
-        }
-      }
-      li.projects{
-        .circle-inner{
-        }
-        img{
-        }
-      }
-      li.resume{
-        .circle-inner{
-        }
-        img{
-        }
-      }
-      li.contact{
-        .circle-inner{
-        }
-        img{
-        }
-      }
-
-      li .icon{
-        position: absolute;
-      }
-
-
     }
 
   }
 }
 
 
-.social li{
-  margin: 10px 20px;
-  float:left;
-  img{
-    width: 50px;
-    height: 50px;
+.social {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  li{
+    margin-left: 20px;
+    float: right;
+    font-family: "SSSocial";
+    font-weight: bold;
+    font-size: 3.5em;
+    position: relative;
+    a{
+      color: white;
+      opacity: 0.7;
+      border-radius: 50%;
+      // background: white;
+      width: 50px;
+      height: 50px;
+      span{
+        position:absolute;
+        top: -6px;
+        left: 0;
+        z-index: -5;
+        width: 100%;
+        height: 100%;
+        background: white;
+        opacity: 0;
+        @include border-radius(50%);
+        @include transition(opacity 0.4s);
+      }
+
+      @include transition(color 0.4s ease-out, opacity 0.6s);
+      &:hover, &:focus{
+        opacity: 1;
+        span{
+          opacity: 1;
+        }
+      }
+      &:hover.facebook, &:focus.facebook{
+        color: #3B5998; }
+      &:hover.twitter, &:focus.twitter{
+        color: #2daae1; }
+      &:hover.linkedin, &:focus.linkedin{
+        color: #0370a9; }
+      &:hover.googleplus, &:focus.googleplus{
+        color: #31302e; }
+    }
+    img{
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 
@@ -325,13 +334,10 @@ a{
     .name-wrapper{
       width: 100%;
       margin: 30% auto 0 auto;
-      //width: 300px;
-      //height: 300px;
-      //border-radius: 50%;
+      position: relative;
       background: transparent;
       text-align: center;
       .name{
-        width: 100%;
         margin-bottom: 30px;
         position: relative;
         h1{
@@ -345,45 +351,45 @@ a{
         .yuan{
           color:white;//#0099CC;
         }
-        .underline{
-          position: absolute;
-          top: 60%;
-          width: 0%;
-          border-bottom: 5px solid $default-circle-color;
-          z-index: -1;
-        }
       }
       .i{
       }
       .slogan{
-        float: right;
+        position: absolute;
+        bottom:   50px;
+        right:    0;
         h2{
-          float:left;
+          font-family: "QuicksandBoldRegular";
           padding-left: 10px;
+          color: white;
         }
-        .program{
-          color: #ABCF00;
-        }
-        .design{
-          color: #FF004D;
-        }
-        .create{
-          color: #FF5900;
-        }
-        .innovate{
-          color: #6D00FF;
-        }
+        // .program{
+        //   color: #ABCF00;
+        // }
+        // .design{
+        //   color: #FF004D;
+        // }
+        // .create{
+        //   color: #FF5900;
+        // }
+        // .innovate{
+        //   color: #6D00FF;
+        // }
         margin-bottom: 30px;
       }
     }
-    .promotion{
-      margin: 200% 0 0 0;
-      text-align: center;
+  }
+  .recent-posts{
+    .section*{
+      height: 200px;
+      width: 200px;
+      background: blue;
     }
   }
-
-
 }
 .footer{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   text-align: center;
 }
