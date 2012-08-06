@@ -5,9 +5,13 @@ $back_pink: #EDBBCF; //EDBBBB
 $back_color_front: #94CDCB; //light blue
 $back_color_art: #BB99EE; //light purple
 $back_color_projects: #EE8855;//orange
-// #77CC66 light green
+$back_color_blog: #669955; //light green
 
 
+// .program{ //   color: #ABCF00; // }
+// .design{ //   color: #FF004D; // }
+//.create{ //   color: #FF5900; // } //
+//.innovate{ //   color: #6D00FF; // }
 $hover-circle-size: 40px;
 $default-circle-size: 30px;
 $default-circle-color: #00CCCC;
@@ -27,11 +31,16 @@ $default-circle-color: #00CCCC;
  * ==========================================================================*/
 body {
   font-family: QuicksandBookRegular, Arial, Helvetica, sans-serif;
-  background: $back_color_front;//light blue
   font-size: 13px;
   color: white;
   min-width: 320px;
   min-height: 320px;
+}
+body.front{
+  background: $back_color_front;//light blue
+}
+body.blog{
+  background: $back_color_blog;//light blue
 }
 
 h1{
@@ -131,7 +140,7 @@ a{
     bottom: 0px;
     @include transition( bottom 1s, color 0.5s, background 0.5s 0.2s);
   }
-  a:hover p{
+  a:hover p, a:focus p, a:active p{
     bottom: -25px;
   }
 }
@@ -152,7 +161,7 @@ a{
     top: 15px;
     @include transition( right 1s, color 0.5s, background 0.5s 0.2s);
   }
-  a:hover p{
+  a:hover p, a:focus p, a:active p{
     right: 60px;
   }
 }
@@ -178,11 +187,11 @@ a{
         min-width: 55px;
 
         //pseudoclasses
-        a:hover p{
+        a:hover p, a:focus p, a:active p{
           color: white;
           background: grey;
         }
-        a:hover .circle-inner{
+        a:hover .circle-inner, a:focus .circle-inner, a:active .circle-inner{
           height:   $hover-circle-size;
           width:    $hover-circle-size;
           top:      2px;
@@ -279,20 +288,20 @@ a{
       }
 
       @include transition(color 0.4s ease-out, opacity 0.6s);
-      &:hover, &:focus{
+      &:hover, &:focus, &:active{
         opacity: 1;
         span{
           opacity: 1;
         }
       }
-      &:hover.facebook, &:focus.facebook{
+      &:hover.facebook, &:focus.facebook, &:active.facebook{
         color: #3B5998; }
-      &:hover.twitter, &:focus.twitter{
+      &:hover.twitter, &:focus.twitter,&:active.twitter{
         color: #2daae1; }
-      &:hover.linkedin, &:focus.linkedin{
+      &:hover.linkedin, &:focus.linkedin, &:active.linkedin{
         color: #0370a9; }
-      &:hover.googleplus, &:focus.googleplus{
-        color: #31302e; }
+      &:hover.googleplus, &:focus.googleplus, &:active.googleplus{
+        color: #CC0000; }
     }
     img{
       width: 50px;
@@ -333,7 +342,7 @@ a{
      * ==================================================================================*/
     .name-wrapper{
       width: 100%;
-      margin: 30% auto 0 auto;
+      margin: 15em auto 0 auto;
       position: relative;
       background: transparent;
       text-align: center;
@@ -363,33 +372,69 @@ a{
           padding-left: 10px;
           color: white;
         }
-        // .program{
-        //   color: #ABCF00;
-        // }
-        // .design{
-        //   color: #FF004D;
-        // }
-        // .create{
-        //   color: #FF5900;
-        // }
-        // .innovate{
-        //   color: #6D00FF;
-        // }
         margin-bottom: 30px;
       }
     }
   }
   .recent-posts{
-    .section*{
+    h3{
+      text-align: center;
+      margin: 1em 4em;
+      padding: .25em .5em;
+      background: grey;
+    }
+    div[class*='section-']{
+      float: left;
+      width: (960px/3);//960/3
+    }
+    .slide{
+      margin: auto;
+      @include border-radius(50%);
+      border: solid white 5px;
       height: 200px;
       width: 200px;
-      background: blue;
+      background: #DDEEEE;
+      position: relative;
+      a {
+        h4{
+          font-size: 2em;
+          margin: 20% 3%;
+        }
+        .mask{
+          @include border-radius(50%);
+          overflow: hidden;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+        }
+
+      }
     }
   }
 }
 .footer{
-  position: absolute;
+  margin-top: 20%;
   width: 100%;
   bottom: 0;
   text-align: center;
+}
+
+.content-wrapper{
+  margin: 10px;
+
+  #content{
+    height: 300px;
+    background: white;
+    width: 100%;
+  }
+}
+
+.main .title-wrapper{
+  width: 100%;
+  margin: 4em auto 0 auto;
+  position: relative;
+  background: transparent;
+  h1{
+  font-size: 10em;
+}
 }
