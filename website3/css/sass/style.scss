@@ -33,8 +33,8 @@ body {
   font-family: QuicksandBookRegular, Arial, Helvetica, sans-serif;
   font-size: 13px;
   color: white;
-  min-width: 320px;
-  min-height: 320px;
+  min-width: 330px;
+  min-height: 330px;
 }
 body.front{
   background: $back_color_front;//light blue
@@ -57,7 +57,6 @@ h1{
 h2{
   font-size: 1.5em;
 }
-
 h3{
   font-size: 1.2em;
   font-weight:bold;
@@ -68,15 +67,12 @@ h4{
   font-weight: bold;
 
 }
-
 b{
   font-weight: bold;
 }
-
 p{
   line-height: 1.5em;
 }
-
 a{
   color: #1B9EE0;
   text-decoration: none;
@@ -140,7 +136,7 @@ a{
     bottom: 0px;
     @include transition( bottom 1s, color 0.5s, background 0.5s 0.2s);
   }
-  a:hover p, a:focus p, a:active p{
+  a:hover p, a:focus p{// a:active p{
     bottom: -25px;
   }
 }
@@ -157,14 +153,17 @@ a{
     height: 8%;
   }
   p{
+    z-index: 5;
     right: 10px;
     top: 15px;
     @include transition( right 1s, color 0.5s, background 0.5s 0.2s);
   }
-  a:hover p, a:focus p, a:active p{
+  a:hover p, a:focus p{// a:active p{
     right: 60px;
   }
 }
+
+
 .main-menu-wrapper{
   background: white;
   // border-left: solid 3px #B8B8B8;
@@ -187,11 +186,11 @@ a{
         min-width: 55px;
 
         //pseudoclasses
-        a:hover p, a:focus p, a:active p{
+        a:hover p, a:focus p{// a:active p{
           color: white;
           background: grey;
         }
-        a:hover .circle-inner, a:focus .circle-inner, a:active .circle-inner{
+        a:hover .circle-inner, a:focus .circle-inner{// a:active .circle-inner{
           height:   $hover-circle-size;
           width:    $hover-circle-size;
           top:      2px;
@@ -229,6 +228,7 @@ a{
           position:   absolute;
           top:        7px;
           left:       5px;
+          z-index:    10;
         }
 
       }
@@ -258,7 +258,7 @@ a{
 .social {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -20px;
 
   li{
     margin-left: 20px;
@@ -276,11 +276,11 @@ a{
       height: 50px;
       span{
         position:absolute;
-        top: -6px;
+        top: -5px;
         left: 0;
         z-index: -5;
-        width: 100%;
-        height: 100%;
+        width: 99%;
+        height: 99%;
         background: white;
         opacity: 0;
         @include border-radius(50%);
@@ -318,10 +318,9 @@ a{
   height: 100%;
   margin: auto;
   .main{
-
-
+    margin: 1em;
     /* ==================================================================================
-     *      Non Index Pages styling
+     *      Default Pages styling
      * ==================================================================================*/
     .header{
       .title{
@@ -334,11 +333,8 @@ a{
       }
     }
 
-
-
-
     /* ==================================================================================
-     *      Index Page styling
+     *      Front Page styling
      * ==================================================================================*/
     .name-wrapper{
       width: 100%;
@@ -350,6 +346,7 @@ a{
         margin-bottom: 30px;
         position: relative;
         h1{
+          white-space:nowrap;
           float:left;
           font-size: 100%*20;
         }
@@ -365,8 +362,10 @@ a{
       }
       .slogan{
         position: absolute;
-        bottom:   50px;
+        bottom:   0;
         right:    0;
+        // width:    100%;
+        white-space: nowrap;
         h2{
           font-family: "QuicksandBoldRegular";
           padding-left: 10px;
@@ -376,6 +375,9 @@ a{
       }
     }
   }
+
+
+
   .recent-posts{
     h3{
       text-align: center;
@@ -407,7 +409,6 @@ a{
           height: 100%;
           width: 100%;
         }
-
       }
     }
   }
@@ -438,3 +439,9 @@ a{
   font-size: 10em;
 }
 }
+
+
+// .program{color: #ABCF00;}
+// .design{color: #FF004D; }
+// .create{color: #FF5900; }
+// .innovate{color: #6D00FF;}
