@@ -8,13 +8,11 @@ $back_color_projects: #EE8855;//orange
 $back_color_blog: #669955; //light green
 
 
-// .program{ //   color: #ABCF00; // }
-// .design{ //   color: #FF004D; // }
-//.create{ //   color: #FF5900; // } //
-//.innovate{ //   color: #6D00FF; // }
-$hover-circle-size: 40px;
-$default-circle-size: 30px;
-$default-circle-color: #00CCCC;
+$hover-button-size-small: 31px;
+$default-button-size-small: 25px;
+$hover-button-size: 45px;
+$default-button-size: 35px;
+$default-button-color: #00CCCC;
 //SASS Import
 @import "compass";
 
@@ -44,15 +42,7 @@ body.blog{
 }
 
 h1{
-  // font-size: 2em;
-  font-family: WindsongRegular;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: default;
+  font-size: 2em;
 }
 h2{
   font-size: 1.5em;
@@ -114,143 +104,99 @@ a{
 }
 
 /* ==========================================================================
- * Menu -Styling
+ * General Layout Specific Styling
  * ==========================================================================*/
 
-.main-menu-wrapper.top{
-  left:0;
-  top:0;
-  max-height: 6.92307692em;
-  min-height: 4em;
-  width: 100%;
-  .main-menu{
-    min-width: 320px;
-  }
-  li{
-    float:left;
-    width: 11%;
-    max-width: 90px;
-  }
-  p{
-    left: -20%;
-    bottom: 0px;
-    @include transition( bottom 1s, color 0.5s, background 0.5s 0.2s);
-  }
-  a:hover p, a:focus p{// a:active p{
-    bottom: -25px;
-  }
-}
-.main-menu-wrapper.right{
-  top:0;
-  right: 0;
-  max-width: 6.92307692em;
-  min-width: 3em;
-  height: 100%;
-  .main-menu{
-  }
-  li{
-    float:none;
-    height: 8%;
-  }
-  p{
-    z-index: 5;
-    right: 10px;
-    top: 15px;
-    @include transition( right 1s, color 0.5s, background 0.5s 0.2s);
-  }
-  a:hover p, a:focus p{// a:active p{
-    right: 60px;
-  }
-}
 
+/* ==========================================================================
+ * Menu -Styling - default
+ * ==========================================================================*/
 
 .main-menu-wrapper{
   background: white;
-  // border-left: solid 3px #B8B8B8;
-  position:fixed;
-  font-size: 1.0em;
+  z-index: 3;
+  min-width: 4em;
+  min-height: 4em;
+  @include transition(height 0.7s, width 0.7s);
+  .logo{
+    float: left;
+    width: 100%;
+    height: auto;
+    background: grey;
+    a{
+      color: white;
+    }
+    h1{
+      font-size: 4em;
+      text-align: center;
+      @include transition(font-size 0.7s);
+    }
+  }
   .main-menu{
     height: 100%;
     width: 100%;
-    .nav{
-      height: 100%;
-      width: 100%;
-    }
     .nav ul {
       height: 100%;
       width: 100%;
-      /*General main-menu list styling */
-      li{
-        position: relative;
-        min-height: 50px;
-        min-width: 55px;
-
-        //pseudoclasses
-        a:hover p, a:focus p{// a:active p{
-          color: white;
-          background: grey;
-        }
-        a:hover .circle-inner, a:focus .circle-inner{// a:active .circle-inner{
-          height:   $hover-circle-size;
-          width:    $hover-circle-size;
-          top:      2px;
-          left:    0px;
-        }
-        p{
-          color: transparent;
-          position: absolute;
-          background: transparent;
-          height: 20px;
-          padding: 3px 10px;
-          @include border-radius(10px);
-        }
-        .circle-outer{
-          display:  table;
-          height:   100%;
-          width:    100%;
-          position: relative;
-          img.icon{
-            z-index:  1;
-            position: absolute;
-            left:     0;
-            top:      0;
-          }
-        }
-
-        .circle-inner{
-          background: $default-circle-color;
-          margin:     0 7px;
-          height:     $default-circle-size;
-          width:      $default-circle-size;
-          border:     3px solid grey;
-          @include    border-radius( 50%);
-          @include    transition( height 0.6s, width 0.6s, left 0.6s, top 0.6s );
-          position:   absolute;
-          top:        7px;
-          left:       5px;
-          z-index:    10;
-        }
-
-      }
-
-      /* Active main-menu list styling */
-
-      li.active{
-        .circle-inner{
-          height:   $hover-circle-size;
-          width:    $hover-circle-size;
-          left:    0px;
-          top:      2px;
-        }
-        img{
-        }
-      }
-      li{
-      }
-
-      /* icons for menu */
+      display: block;
+      clear: both;
     }
+  }
+}
 
+
+/* ==========================================================================
+ * Menu -Styling - Menu Buttons
+ * ==========================================================================*/
+.main-menu-wrapper .main-menu .nav ul{
+  li{
+    position: relative;
+    //pseudoclasses
+    p{
+      color: grey;
+      position: absolute;
+      background: transparent;
+      height: 20px;
+      @include transition( top 1s, color 0.5s, background 0.5s 0.2s);
+    }
+    a:hover p, a:focus p{// a:active p{
+      // border-bottom: 1px solid grey;
+      // color: white;
+      // background: grey;
+    }
+    .button-outer{
+      display:  table;
+      clear:    both;
+      position: relative;
+      img.icon{
+        z-index:  11;
+        position: absolute;
+        left:     0;
+        top:      0;
+      }
+    }
+    .button-inner{
+      background: $default-button-color;
+      margin:     0 7px;
+      border:     3px solid grey;
+      position:   absolute;
+      z-index:    10;
+      height:     $default-button-size;
+      width:      $default-button-size;
+
+      @include    border-radius( 50%);
+      @include    transition( height 0.6s, width 0.6s, left 0.6s, top 0.6s );
+    }
+  }
+  /* Active main-menu list styling */
+
+  li.active{
+    .button-inner{
+      height:   $hover-button-size;
+      width:    $hover-button-size;
+      left:    0px;
+      top:      2px;
+    }
   }
 }
 
@@ -265,7 +211,7 @@ a{
     float: right;
     font-family: "SSSocial";
     font-weight: bold;
-    font-size: 3.5em;
+    font-size: 400%;
     position: relative;
     a{
       color: white;
@@ -276,7 +222,7 @@ a{
       height: 50px;
       span{
         position:absolute;
-        top: -5px;
+        top: -12.2%;
         left: 0;
         z-index: -5;
         width: 99%;
@@ -313,10 +259,11 @@ a{
 
 
 .main-wrapper{
-  width: 100%;
-  max-width: 960px;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
-  margin: auto;
+  width: 100%;
   .main{
     margin: 1em;
     /* ==================================================================================
@@ -349,6 +296,14 @@ a{
           white-space:nowrap;
           float:left;
           font-size: 100%*20;
+          font-family: WindsongRegular;
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          cursor: default;
         }
         .alice{
           color:white;//#00CCCC;
@@ -368,7 +323,6 @@ a{
         white-space: nowrap;
         h2{
           font-family: "QuicksandBoldRegular";
-          padding-left: 10px;
           color: white;
         }
         margin-bottom: 30px;
@@ -387,7 +341,7 @@ a{
     }
     div[class*='section-']{
       float: left;
-      width: (960px/3);//960/3
+      width: (920px/3);
     }
     .slide{
       margin: auto;
@@ -413,6 +367,9 @@ a{
     }
   }
 }
+
+
+
 .footer{
   margin-top: 20%;
   width: 100%;
@@ -437,11 +394,5 @@ a{
   background: transparent;
   h1{
   font-size: 10em;
+  }
 }
-}
-
-
-// .program{color: #ABCF00;}
-// .design{color: #FF004D; }
-// .create{color: #FF5900; }
-// .innovate{color: #6D00FF;}

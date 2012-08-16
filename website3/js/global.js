@@ -1,103 +1,96 @@
-$(window).bind("load",function(){
-});
-
 $(document).ready(function(){
-
-
+  var default_button_size = "30px";
+  var hover_button_size = "40px";
   centerIcons();
-  var $default_circle_size = "30px";
-  var $hover_circle_size = "40px";
-  dynamicMenu();
-  resizeText();
+  addClasses();
   $(window).resize(function() {
-    dynamicMenu();
-    resizeText();
+    addClasses();
+    centerIcons();
   });
   windowLoad();
-
-
-
 });
+
+function addClasses(){
+  var windowW = $(window).width();
+  var windowH = $(window).height();
+  //add portrait / landscape class
+  if (windowH > windowW){
+    $("body").addClass("portrait").removeClass("landscape");
+  }else{
+    $("body").addClass("landscape").removeClass("portrait");
+  }
+
+  //remove previous screen size classes
+  $("body").removeClass (function (index, css) {
+      return (css.match (/\bscreen-width-\S+/g) || []).join(' ');
+  });
+  $("body").removeClass (function (index, css) {
+      return (css.match (/\bscreen-height-\S+/g) || []).join(' ');
+  });
+
+  //add width of screen class
+  if (windowW > 1024){
+    $("body").addClass("screen-width-large");
+  }else if (windowW > 768){
+    $("body").addClass("screen-width-medium");
+  }else if (windowW > 480){
+    $("body").addClass("screen-width-small");
+  }else{
+    $("body").addClass("screen-width-xsmall");
+  }
+
+  //add height of screen class
+  if (windowH > 1024){
+    $("body").addClass("screen-height-large");
+  }else if (windowH > 768){
+    $("body").addClass("screen-height-medium");
+  }else if (windowH > 480){
+    $("body").addClass("screen-height-small");
+  }else{
+    $("body").addClass("screen-height-xsmall");
+  }
+}
 
 function windowLoad(){
   $(window).load( function() {
-    dynamicMenu();
-    resizeText();
+    centerIcons();
   });
 }
 
 function centerIcons(){
-  // var $circleW = $(".main-menu .circle-outer").width();
-  // var $circleH = $(".main-menu .circle-outer").height();
-  // var $circleH = $circleW
-  // var $iconW = $(".main-menu li img.icon").width();
-  // var $iconH = $(".main-menu li img.icon").height();
-  // var $iconPadH = ($circleH - $iconH)/2;
-  // var $iconPadW = ($circleW - $iconW)/2;
-  // var $liW = $(".main-menu li").width();
-  // var $liH = $(".main-menu li").height();
+  var liSize = $(".main-menu .nav li").size();
 
-  var $liSize = $(".main-menu .nav li").size();
-
+  var liW = $(".main-menu ul li").width();
+  var liW = $(".main-menu ul li").height();
   $(".main-menu ul li").each( function($index) {
-    var $liW = $(this).width();
-    var $liH = $(this).height();
+    var buttonSize = $(this).find(".button-inner").width();
+    console.log(buttonSize);
+
     $(this).find("img.icon").load( function () {
-      var $iconW = $(this).width()*0.55;
-      var $iconH = $(this).height()*0.55;
-      var $padH = ((50 - $iconH)/2);
-      var $padW = ((60 - $iconW)/2);
+      var iconW = (buttonSize/$(this).width()*0.52)*$(this).width();
+      var iconH = (buttonSize/$(this).height()*0.52)*$(this).height();
+      console.log(buttonSize);
+      var padH = ((buttonSize+20 - iconH)/2);
+      var padW = ((buttonSize+30 - iconW)/2);
       $(this).css({
-        "width": $iconW+"px",
-        "height": $iconH+"px",
-        "margin": $padH+"px "+$padW+"px",
+        "width": iconW+"px",
+        "height": iconH+"px",
+        "margin": padH+"px "+padW+"px",
       });
     });
   });
 
 }
 
-function dynamicMenu(){
-  var $windowW = $(window).width();
-  var $windowH = $(window).height();
-  var $liSize = $(".main-menu .nav li").size();
-  var $liW = $(".main-menu .nav li").width();
-  var $liH =  $(".main-menu .nav li").height();
-  var $padResizeW = ($windowW - $liW*$liSize)/2;
-  var $padResizeH = ($windowH - $liH*$liSize)/2.5;
-
-  //if window height > width put menu on right side
-  //on windows load
-  if ($windowH > $windowW){
-    $(".main-menu-wrapper").addClass("top").removeClass("right");
-    $("body").addClass("top").removeClass("right");
-    $(".main-menu-wrapper .main-menu .nav").css({
-      "padding": "0 "+$padResizeW+"px",
-    });
-  }else{//if window width > height put menu on top
-    $(".main-menu-wrapper").addClass("right").removeClass("top");
-    $("body").addClass("top").removeClass("right");
-    $(".main-menu-wrapper .main-menu .nav").css({
-      "padding": $padResizeH+"px 0 ",
-    });
-  }
-  $(window).load(function() {
-  });
-}
-
 
 function resizeText(){
-  $("h1, h2").each( function($index) {
-     while( $(this).width() > $(this).width()*0.95) {
+  $("h1, h2, .social.links").each( function($index) {
+     while( $(this).outerWidth() > $("body .main-wrapper .main").outerWidth()*0.95) {
       $(this).css( 'font-size', (parseInt($(this).css('font-size')) - 2) + "px");
      }
-     while( $(this).width() < $(this).parent().parent().width()*0.95) {
+     while( $(this).outerWidth() < $("body .main-wrapper .main").outerWidth()*0.95) {
       $(this).css( 'font-size', (parseInt($(this).css('font-size')) + 2) + "px");
      }
   });
-
-}
-
-function resize () {
 
 }
