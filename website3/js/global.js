@@ -57,24 +57,21 @@ function windowLoad(){
 }
 
 function centerIcons(){
-  var liSize = $('.main-menu .nav li').size();
+  // var liSize = $('.main-menu .nav li').size();
 
-  var liW = $('.main-menu ul li').width();
-  var liW = $('.main-menu ul li').height();
-  $('.main-menu ul li').each( function($index) {
-    var buttonSize = $(this).find('.button-inner').width();
-    $(this).find('img.icon').load( function () {
-      var iconW = (buttonSize/$(this).width()*0.52)*$(this).width();
-      var iconH = (buttonSize/$(this).height()*0.52)*$(this).height();
-      var padH = ((buttonSize+20 - iconH)/2);
-      var padW = ((buttonSize+30 - iconW)/2);
-      $(this).css({
-        'width': iconW+'px',
-        'height': iconH+'px',
-        'margin': padH+'px '+padW+'px',
-      });
-    });
-  });
+  // var liW = $('.main-menu ul li').width();
+  // var liW = $('.main-menu ul li').height();
+  // $('.main-menu ul li').each( function($index) {
+  //   var buttonSize = $(this).find('.button-inner').width();
+  //   $(this).find('img.icon').load( function () {
+  //     var iconW = (buttonSize/$(this).width()*0.52)*$(this).width();
+  //     var iconH = (buttonSize/$(this).height()*0.52)*$(this).height();
+  //     $(this).css({
+  //       'width': iconW+'px',
+  //       'height': iconH+'px',
+  //     });
+  //   });
+  // });
 }
 
 
@@ -104,6 +101,7 @@ function resize(){
   addClasses();
   centerIcons();
   resizeTitle();
+  // $('.main-menu').height($('.main-menu-wrapper').height());
   var mainW = $('.main-wrapper').width();
   var mainH = $('.main-wrapper').height();
   var mainMR = parseInt($('.main-wrapper').css('margin-right'));
@@ -115,7 +113,7 @@ function resize(){
     });
   } else if (mainMR == 0){
     $('.main').css({
-      'height': (mainH - mainMT)+'px',
+      'height': '100%',
       'width': '100%',
     });
   }else if(mainMT == 0) {

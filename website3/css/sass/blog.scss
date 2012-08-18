@@ -25,3 +25,102 @@ $default-button-color: #00CCCC;
 /* =========================================================================
  * General Blog Template Styling
  * ==========================================================================*/
+
+body.blog{
+  background: $back_color_front;//light blue
+}
+
+/* =========================================================================
+ * Blog Page Responsive
+ * ==========================================================================*/
+
+
+/* =========================================================================
+ * Blog Page Content Styling
+ * ==========================================================================*/
+.page-content{
+  // min-height: 500px;
+  .timeline{
+    border-left: 3px solid white;
+    height: 100%;
+    width: 100%;
+    margin: 0 1.5em;
+  }
+  .blog-posts{
+    p{
+      font-size: 1.25em;
+    }
+    min-height: 500px;
+    // width: 90%;
+    margin: 0 3em 0 3em;
+    color: $dark_text;
+    .content{
+      padding: 2em;
+      position: relative;
+      .tag{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 25px;
+        max-width: 50px;
+        background: green;
+      }
+    }
+    h2{
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
+  div[id*='post-']{
+    background: white;
+    @include border-radius(2em);
+    margin-bottom: 100px;
+    position: relative;
+  }
+
+  .post-indicator{
+    width: 10px;
+    height: 10px;
+    @include border-radius(50%);
+    background: white;
+    position: relative;
+    position: absolute;
+      top:      40px;
+      left:     -45px;
+    .point{
+      position: absolute;
+        top: -20px;
+        left: 10px;
+      border-top: 25px solid transparent;
+      border-bottom: 25px solid transparent;
+      border-right: 20px solid white;
+    }
+  }
+  .date{
+    position: absolute;
+      left: -113px;
+      top:  5px;
+    color: white;
+    font-weight: bold;
+    span{
+      display: block;
+      text-align: center;
+    }
+    .M{font-size:1.5em;}
+    .D{font-size: 2.5em; margin: 0.2em 0;}
+    .Y{}
+  }
+
+  .links{
+    clear: both;
+    width: 100%;
+    .share, .comment{
+      float: left;
+    }
+    .share .ss-icon{
+      font-size: 2em;
+    }
+
+  }
+
+}

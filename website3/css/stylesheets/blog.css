@@ -1,3 +1,120 @@
 /* =========================================================================
  * General Blog Template Styling
  * ==========================================================================*/
+/* line 29, ../sass/blog.scss */
+body.blog {
+  background: #94cdcb;
+}
+
+/* =========================================================================
+ * Blog Page Responsive
+ * ==========================================================================*/
+/* =========================================================================
+ * Blog Page Content Styling
+ * ==========================================================================*/
+/* line 43, ../sass/blog.scss */
+.page-content .timeline {
+  border-left: 3px solid white;
+  height: 100%;
+  width: 100%;
+  margin: 0 1.5em;
+}
+/* line 49, ../sass/blog.scss */
+.page-content .blog-posts {
+  min-height: 500px;
+  margin: 0 3em 0 3em;
+  color: #443b35;
+}
+/* line 50, ../sass/blog.scss */
+.page-content .blog-posts p {
+  font-size: 1.25em;
+}
+/* line 57, ../sass/blog.scss */
+.page-content .blog-posts .content {
+  padding: 2em;
+  position: relative;
+}
+/* line 60, ../sass/blog.scss */
+.page-content .blog-posts .content .tag {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 25px;
+  max-width: 50px;
+  background: green;
+}
+/* line 69, ../sass/blog.scss */
+.page-content .blog-posts h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+/* line 74, ../sass/blog.scss */
+.page-content div[id*='post-'] {
+  background: white;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  -ms-border-radius: 2em;
+  -o-border-radius: 2em;
+  border-radius: 2em;
+  margin-bottom: 100px;
+  position: relative;
+}
+/* line 81, ../sass/blog.scss */
+.page-content .post-indicator {
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  position: absolute;
+  top: 40px;
+  left: -45px;
+}
+/* line 90, ../sass/blog.scss */
+.page-content .post-indicator .point {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 20px solid white;
+}
+/* line 99, ../sass/blog.scss */
+.page-content .date {
+  position: absolute;
+  left: -113px;
+  top: 5px;
+  color: white;
+  font-weight: bold;
+}
+/* line 105, ../sass/blog.scss */
+.page-content .date span {
+  display: block;
+  text-align: center;
+}
+/* line 109, ../sass/blog.scss */
+.page-content .date .M {
+  font-size: 1.5em;
+}
+/* line 110, ../sass/blog.scss */
+.page-content .date .D {
+  font-size: 2.5em;
+  margin: 0.2em 0;
+}
+/* line 114, ../sass/blog.scss */
+.page-content .links {
+  clear: both;
+  width: 100%;
+}
+/* line 117, ../sass/blog.scss */
+.page-content .links .share, .page-content .links .comment {
+  float: left;
+}
+/* line 120, ../sass/blog.scss */
+.page-content .links .share .ss-icon {
+  font-size: 2em;
+}

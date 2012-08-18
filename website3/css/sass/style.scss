@@ -34,14 +34,12 @@ body {
   font-family: QuicksandBookRegular, Arial, Helvetica, sans-serif;
   font-size: 13px;
   color: white;
-  min-width: 330px;
-  min-height: 330px;
+  min-width: 300px;
+  min-height: 300px;
+  background: $back_color_front;//light blue
 }
 body.front{
   background: $back_color_front;//light blue
-}
-body.blog{
-  background: $back_color_blog;//light blue
 }
 
 h1{
@@ -65,6 +63,8 @@ b{
 }
 p{
   line-height: 1.5em;
+  font-size: 1em;
+  margin-bottom: 2em;
 }
 a{
   color: #1B9EE0;
@@ -180,12 +180,6 @@ a:visited{
       display:  table;
       clear:    both;
       position: relative;
-      img.icon{
-        z-index:  11;
-        position: absolute;
-        left:     0;
-        top:      0;
-      }
     }
     .button-inner{
       background: $default-button-color;
@@ -282,7 +276,8 @@ a:visited{
      *      Front Page styling
      * ==================================================================================*/
     .page-title-wrapper{
-      width: 100%;
+      margin: 4em auto 0 auto;
+      width: 95%;
       position: relative;
       text-align: center;
       a{
@@ -329,9 +324,12 @@ a:visited{
           left:     0;
         width:      100%;
         white-space: nowrap;
-        background: grey;
+        // background: grey;
         padding:    0.5em 0;
         @include border-radius(1em);
+        p{
+          margin-bottom: 0;
+        }
 
 
         h2{
@@ -355,6 +353,11 @@ a:visited{
       }
     }
   }
+}
+
+.page-content{
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .recent-posts{
@@ -433,9 +436,25 @@ a:visited{
   background: #368AA2;
   min-height: 4em;
   padding:    1em 0;
-  z-index:    -10;
   p{
     vertical-align: bottom;
+  }
+  ul{
+    margin: 0 auto;
+    clear: both;
+  }
+  li{
+    float: left;
+    padding: 0.2em 1em;
+    a{
+      color: white;
+      &:hover, &:focus{
+        text-decoration: underline;
+      }
+      &:active, &:visited{
+        color: white;
+      }
+    }
   }
 }
 
@@ -450,11 +469,30 @@ a:visited{
 }
 
 .main .page-title-wrapper{
-  width: 100%;
-  margin: 4em auto 0 auto;
-  position: relative;
-  background: transparent;
-  h1{
-  font-size: 10em;
-  }
 }
+
+#contact{
+  max-width: 960px;
+  display: none;
+}
+
+.nav img.icon{
+  z-index:  11;
+  position: absolute;
+}
+
+// .nav .about .icon{
+//   background-position: -66px -69px;
+// }
+// .nav .blog .icon{
+//   background-position: -524px -72px;
+// }
+// .nav .artworks .icon{
+//   background-position: -168px -71px;
+// }
+// .nav .resume .icon{
+//   background-position: -66px -69px;
+// }
+// .nav .contact .icon{
+//   background-position: -66px -69px;
+// }

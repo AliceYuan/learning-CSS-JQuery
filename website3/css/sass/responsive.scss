@@ -33,7 +33,7 @@ $default-button-color: #00CCCC;
     height: 100%;
   }
   .main-menu-wrapper{
-    width: 100%;
+    min-width: 100%;
     position: absolute;
       left:0;
       top:0;
@@ -60,6 +60,7 @@ $default-button-color: #00CCCC;
       width: 80%;
     }
   }
+
 }
 
 @media (min-width: 767px) and (max-width: 1260px){
@@ -102,10 +103,6 @@ $default-button-color: #00CCCC;
         top:        7px;
         left:       5px;
       }
-      img.icon{
-        left:     0;
-        top:      0;
-      }
     }
     &:hover, &:focus{// a:active .button-inner{
       .button-inner{
@@ -130,6 +127,13 @@ $default-button-color: #00CCCC;
       margin: 1em auto;
     }
   }
+  .nav img.icon{
+    left:     23px;
+    top:      18px;
+    width:    20px;
+    height:   19px;
+  }
+
 }
 
 // /*small screen sizes -- menu smaller*/
@@ -169,10 +173,6 @@ $default-button-color: #00CCCC;
       height:   40px;
       width:    46px;
       margin:   0 auto;
-      img.icon{
-        left:     -6px;
-        top:      0;
-      }
       .button-inner{
         height:     $default-button-size-small;
         width:      $default-button-size-small;
@@ -189,10 +189,12 @@ $default-button-color: #00CCCC;
       }
     }
   }
-  li.active{
-    .button-inner{
-      height:   $hover-button-size-small;
+
+
+  .main-menu-wrapper .main-menu .nav ul li.active a{
+    .button-outer .button-inner{
       width:    $hover-button-size-small;
+      height:   $hover-button-size-small;
       top:      8px;
       left:     0px;
     }
@@ -202,6 +204,13 @@ $default-button-color: #00CCCC;
     .main{
       margin: 0.5em auto;
     }
+  }
+
+  .nav img.icon{
+    left:     19px;
+    top:      19px;
+    width:    20px;
+    height:   19px;
   }
 }
 
@@ -286,10 +295,6 @@ $default-button-color: #00CCCC;
         top:        7px;
         left:       5px;
       }
-      img.icon{
-        left:     0;
-        top:      0;
-      }
     }
     &:hover, &:focus{// a:active .button-inner{
       .button-inner{
@@ -313,6 +318,12 @@ $default-button-color: #00CCCC;
     .main{
       margin: 0.5em auto;
     }
+  }
+  .nav img.icon{
+    left:     23px;
+    top:      18px;
+    width:    20px;
+    height:   19px;
   }
 }
 
@@ -352,10 +363,6 @@ $default-button-color: #00CCCC;
       height:   40px;
       width:    46px;
       margin:   0 auto;
-      img.icon{
-        left:     -6px;
-        top:      0;
-      }
       .button-inner{
         height:     $default-button-size-small;
         width:      $default-button-size-small;
@@ -385,6 +392,12 @@ $default-button-color: #00CCCC;
     .main{
       margin: 0.5em auto;
     }
+  }
+  .nav img.icon{
+    left:     19px;
+    top:      19px;
+    width:    20px;
+    height:   19px;
   }
 }
 
@@ -466,6 +479,7 @@ $default-button-color: #00CCCC;
       font-size: 1.5em;
     }
   }
+
 }
 
 //width only responsive design min width standard tablet size
