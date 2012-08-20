@@ -1,0 +1,169 @@
+//SASS Variables
+$back_color: transparent;
+$overview_border_radius: 6px;
+$back_pink: #EDBBCF; //EDBBBB
+$back_color_front: #94CDCB; //light blue
+$back_color_art: #BB99EE; //light purple
+$back_color_projects: #EE8855;//orange
+$back_color_blog: #669955; //light green
+$dark_text: #443B35;
+$color2: #997E7E;//#7C778F;//grey-purple //#9C6C6C; //dark pink
+$color2-hover: #645656;
+
+
+$hover-button-size-small: 31px;
+$default-button-size-small: 25px;
+$hover-button-size: 45px;
+$default-button-size: 35px;
+$default-button-color: #00CCCC;
+//SASS Import
+@import "compass";
+
+
+/* ==========================================================================
+ * Menu -Styling - default
+ * ==========================================================================*/
+
+.main-menu-wrapper{
+  background: white;
+  z-index: 3;
+  min-width: 4em;
+  min-height: 4em;
+  @include transition(height 0.7s, width 0.7s);
+  .logo{
+    float: left;
+    a{
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      color: white;
+      background: $color2;
+      @include transition(background 0.5s);
+      &:hover, &:focus{
+        background: $color2-hover;
+      }
+    }
+    h1{
+      text-align: center;
+      @include transition(font-size 0.7s);
+    }
+  }
+  .main-menu{
+    height: 102%;
+    width: 100%;
+    .nav ul {
+      height: 100%;
+      width: 100%;
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+
+/* ==========================================================================
+ * Menu -Styling - Menu Buttons
+ * ==========================================================================*/
+.main-menu-wrapper .main-menu .nav ul{
+  li{
+    position: relative;
+    //pseudoclasses
+    p{
+      color: grey;
+      position: absolute;
+      background: transparent;
+      height: 20px;
+      @include transition( top 1s, color 0.5s, background 0.5s 0.2s);
+    }
+    a:hover p, a:focus p{// a:active p{
+    }
+    .button-outer{
+      display:  table;
+      clear:    both;
+      position: relative;
+    }
+    .button-inner{
+      background: $default-button-color;
+      margin:     0 7px;
+      border:     3px solid grey;
+      position:   absolute;
+      z-index:    10;
+      height:     $default-button-size;
+      width:      $default-button-size;
+
+      @include    border-radius( 50%);
+      @include    transition( height 0.6s, width 0.6s, left 0.6s, top 0.6s );
+    }
+  }
+  img.icon{
+    @include transition(height .8s, width 0.8s);
+    z-index:  11;
+    position: absolute;
+  }
+  /* Active main-menu list styling */
+
+  li.active{
+    .button-inner{
+      height:   $hover-button-size;
+      width:    $hover-button-size;
+      left:    0px;
+      top:      2px;
+    }
+  }
+}
+
+
+/* ==========================================================================
+ * Scroll to top button
+ * ==========================================================================*/
+
+.scroll-top{
+    z-index: 50;
+  a{
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: rgba(0,0,0,0.4);
+    @include border-radius(50%);
+
+    .arrow{
+      position: absolute;
+        top: 15px;
+        left: 15px;
+      width: 0px;
+      height: 0px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 20px solid rgba(255,255,255,0.6);
+    }
+  }
+}
+
+
+.footer{
+  min-width: 100%;
+  text-align: center;
+  background: #368AA2;
+  min-height: 4em;
+  padding:    1em 0;
+  p{
+    vertical-align: bottom;
+  }
+  ul{
+    margin: 0 auto;
+    clear: both;
+  }
+  li{
+    float: left;
+    padding: 0.2em 1em;
+    a{
+      color: white;
+      &:hover, &:focus{
+        text-decoration: underline;
+      }
+      &:active, &:visited{
+        color: white;
+      }
+    }
+  }
+}

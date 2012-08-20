@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="font/ss-social/stylesheet.css">
     <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/stylesheets/screen.css" media="screen, projection"  type="text/css" />
-    <link rel="stylesheet" href="css/stylesheets/style.css">
-    <link rel="stylesheet" href="css/stylesheets/responsive.css">
+    <link rel="stylesheet" href="css/stylesheets/global.style.css">
+    <link rel="stylesheet" href="css/stylesheets/global.nav.css">
+    <link rel="stylesheet" href="css/stylesheets/global.responsive.css">
     <link rel="stylesheet" href="css/stylesheets/print.css" media="print"  type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="plugin/bootstrap/js/bootstrap.min.js" ></script>
@@ -49,7 +50,7 @@
 
   <!-- Alice Yuan copyright 2012 -->
 
-  <body class="front portrait screen-width-small">
+  <body class="front">
   <div class="main-menu-wrapper gradient top clearfix">
     <div class="main-menu clearfix">
       <div class="logo">
@@ -123,73 +124,68 @@
         </div>
       </div>
 
-
-
-
       <div class="page-content">
         <div class="recent-posts clearfix">
-          <div class="recent-title">
-            <a href="blog"><h1> Recent Posts </h1></a>
-          </div>
-          <div class="post-1">
-            <div class="col-1">
-              <img src="img/stock.jpg"/>
-            </div>
-            <div class="col-2">
-              <div class="content">
-                <a href="#"><h2> This is a blog title </h2></a>
-                <h3> Posted: Aug 16 2012 </h3>
-                <p> This is the description  This is the description  This is the description This is the description This is the description This is the description This is the description</p>
-                <a href="/"> Read More >> </a>
-              </div>
-            </div>
-          </div>
+          <h1 class="recent-title">
+            Recent Posts
+          </h1>
+          <ul class="col-1">
+            <li class="post-1">
+              <a href="#">
+                <div class="date">
+                  <p> <span class="M">Aug</span>
+                  <span class="D">17 </span>
+                  </p>
+                </div>
+                <div class="content">
+                  <h2 class="title"> this is a post </h2>
+                  <p class="shortened-desc"> this is a description this is a descriptionthis is a description this is a description  this is a description this is a description </p>
+                </div>
+              </a>
+            </li> <!-- end post -->
 
+            <li class="post-1">
+              <a href="#">
+                <div class="category">
+                  <span></span>
+                </div>
+                <div class="content">
+                  <h2 class="title"> this is a post </h2>
+                  <p class="shortened-desc"> this is a description this is a descriptionthis is a description this is a description  this is a description this is a description </p>
+                </div>
+              </a>
+            </li> <!-- end post -->
+          </ul><!--end col-1-->
 
-          <div class="post-1">
-            <div class="col-1">
-              <img src="img/stock.jpg"/>
-            </div>
-            <div class="col-2">
-              <div class="content">
-                <a href="#"><h2> This is a blog title </h2></a>
-                <h3> Posted: Aug 16 2012 </h3>
-                <p> This is the description  This is the description  This is the description This is the description This is the description This is the description This is the description</p>
-                <a href="/"> Read More >> </a>
-              </div>
-            </div>
-          </div>
+          <ul class="col-2">
+            <li class="post-1">
+              <a href="#">
+                <div class="category">
+                  <span></span>
+                </div>
+                <div class="content">
+                  <h2 class="title"> this is a post </h2>
+                  <img src="img/stock.jpg"/>
+                </div>
+              </a>
+            </li> <!-- end post -->
 
-          <div class="post-1">
-            <div class="col-1">
-              <img src="img/stock.jpg"/>
-            </div>
-            <div class="col-2">
-              <div class="content">
-                <a href="#"><h2> This is a blog title </h2></a>
-                <h3> Posted: Aug 16 2012 </h3>
-                <p> This is the description  This is the description  This is the description This is the description This is the description This is the description This is the description</p>
-                <a href="/"> Read More >> </a>
-              </div>
-            </div>
-          </div>
+            <li class="post-1">
+              <a href="#">
+                <div class="category">
+                  <span></span>
+                </div>
+                <div class="content">
+                  <h2 class="title"> this is a post </h2>
+                  <p class="shortened-desc"> this is a description this is a descriptionthis is a description this is a description  this is a description this is a description </p>
+                </div>
+              </a>
+            </li> <!-- end post -->
+          </ul><!-- end col-2 -->
 
-          <div class="post-1">
-            <div class="col-1">
-              <img src="img/stock.jpg"/>
-            </div>
-            <div class="col-2">
-              <div class="content">
-                <a href="#"><h2> This is a blog title </h2></a>
-                <h3> Posted: Aug 16 2012 </h3>
-                <p> This is the description  This is the description  This is the description This is the description This is the description This is the description This is the description</p>
-                <a href="/"> Read More >> </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> <!-- recent-posts end -->
-    </div><!-- page-content ends --!>
+        </div> <!-- recent-posts end -->
+      </div><!-- page-content ends --!>
+    </div><!-- main ends --!>
 
     <div class="footer">
       <p>
@@ -218,6 +214,7 @@
     </div>
   </div> <!-- main-wrapper ends -->
 
+  <!-- fancy box -->
   <div id="contact" name="contact" title="I'd love to chat">
     <p> hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello
     </p>

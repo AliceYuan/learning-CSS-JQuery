@@ -257,7 +257,9 @@ a:visited{
   }
 }
 
-
+/* ==================================================================================
+ *      Global Styling of main content
+ * ==================================================================================*/
 
 .main-wrapper{
   position: absolute;
@@ -271,9 +273,6 @@ a:visited{
      *      Default Pages styling
      * ==================================================================================*/
 
-    /* ==================================================================================
-     *      Front Page styling
-     * ==================================================================================*/
     .page-title-wrapper{
       margin: 4em auto 0 auto;
       width: 95%;
@@ -312,6 +311,9 @@ a:visited{
       a:hover .page-title,a:focus .page-title{
         background: url(../../img/stock1.jpg);
       }
+      /* ==================================================================================
+       *      Front Page styling
+       * ==================================================================================*/
       .slogan{
         text-shadow: -1px 1px rgba(100, 100, 100, 0.3);
         position: absolute;
@@ -353,6 +355,9 @@ a:visited{
   margin: 5em auto;
 }
 
+/* ==================================================================================
+ *      Front Page recent Posts Styling
+ * ==================================================================================*/
 .recent-posts{
   background: white;
   color: $dark_text;
@@ -385,23 +390,32 @@ a:visited{
     font-size: 1.2em;
   }
   [class*='post-']{
-    width: 100%;
-    height:     12em;
+    width: 82%;
     overflow: hidden;
-    margin: 1.5em 0 3em;
-    // border-bottom: 1px dashed grey;
-    .category{
-      width: 15%;
-        min-width: 70px;
-      height: 100%;
-      float: left;
-      span{
-        width: 50px;
-        height: 50px;
-        background: grey;
-        @include border-radius(50%);
-        display: block;
-      }
+    float: left;
+    border-top: 1px solid #F0F0E5;
+    border-right: 1px solid #F0F0E5;
+    position: relative;
+    padding: 9%;
+    .date{
+      position: absolute;
+        top: 0;
+        right: 0;
+      width: 5em;
+      height: 5em;
+      background: beige;
+      @include border-radius(0 0 0 0.5em);
+      font-size: .6em;
+      padding: 1em;
+      @include box-shadow(2px -2px 2px #F0F0E5);
+        color: $dark_text;
+        font-weight: bold;
+        span{
+          display: block;
+          text-align: center;
+        }
+        .M{font-size:1.5em;}
+        .D{font-size: 2.5em; margin: 0.2em 0;}
     }
     .content{
       img{
@@ -417,7 +431,6 @@ a:visited{
     min-height: 5em;
   }
   .col-1{
-    margin-right: 5%;
   }
   .col-2{
   }
@@ -446,34 +459,6 @@ a:visited{
 }
 
 
-.footer{
-  min-width: 100%;
-  text-align: center;
-  background: #368AA2;
-  min-height: 4em;
-  padding:    1em 0;
-  p{
-    vertical-align: bottom;
-  }
-  ul{
-    margin: 0 auto;
-    clear: both;
-  }
-  li{
-    float: left;
-    padding: 0.2em 1em;
-    a{
-      color: white;
-      &:hover, &:focus{
-        text-decoration: underline;
-      }
-      &:active, &:visited{
-        color: white;
-      }
-    }
-  }
-}
-
 .content-wrapper{
   margin: 10px;
 
@@ -484,76 +469,50 @@ a:visited{
   }
 }
 
-.main .page-title-wrapper{
-}
+/* ==================================================================================
+ *      Global Contact Lightbox Styling
+ * ==================================================================================*/
 
 #contact{
   max-width: 900px;
   display: none;
 }
 
-.nav img.icon{
-  @include transition(height .8s, width 0.8s);
-  z-index:  11;
-  position: absolute;
-}
 
-
-/* ==========================================================================
- * Scroll to top button
- * ==========================================================================*/
-
-.scroll-top{
-    z-index: 50;
+/* ==================================================================================
+ *      Filter Buttons
+ * ==================================================================================*/
+.filters{
+  text-shadow: -1px 1px rgba(100, 100, 100, 0.3);
+  clear: both;
+  color: white;
+  font-size: 1.25em;
+  h3{
+    text-align: center;
+  }
   a{
-    width: 50px;
-    height: 50px;
+    color: white;
+    margin: 0 1em;
+    float:left;
+    text-align: center;
+  }
+  a:hover, a:focus{
+    font-weight: bold;
+  }
+  a:hover span, a:focus span{
+  }
+  a span{
     display: block;
-    background: rgba(0,0,0,0.4);
+    width: 3.5em;
+    height: 3.5em;
+    background: green;
+    margin: .5em auto;
+    border: 0.2em white solid;
+    @include transition(border 1s, width 1s, height 1s);
     @include border-radius(50%);
-
-    .arrow{
-      position: absolute;
-        top: 15px;
-        left: 15px;
-      width: 0px;
-      height: 0px;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-bottom: 20px solid rgba(255,255,255,0.6);
-    }
   }
-}
-
-/* ==========================================================================
- * footer Menu
- * ==========================================================================*/
-
-.footer{
-  min-width: 100%;
-  text-align: center;
-  background: #368AA2;
-  min-height: 4em;
-  padding:    1em 0;
-  p{
-    vertical-align: bottom;
-  }
-  ul{
+  .categories {
     margin: 0 auto;
     clear: both;
   }
-  li{
-    float: left;
-    padding: 0.2em 1em;
-    a{
-      color: white;
-      &:hover, &:focus{
-        text-decoration: underline;
-      }
-      &:active, &:visited{
-        color: white;
-      }
-    }
-  }
 }
-

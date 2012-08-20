@@ -6,35 +6,56 @@ body.blog {
   background: #94cdcb;
 }
 
+/* line 33, ../sass/blog.scss */
+body.blog .main-wrapper .main .page-title-wrapper .page-title h1 {
+  font-size: 1.17em;
+}
+
 /* =========================================================================
  * Blog Page Responsive
  * ==========================================================================*/
 /* =========================================================================
  * Blog Page Content Styling
  * ==========================================================================*/
-/* line 43, ../sass/blog.scss */
+/* line 46, ../sass/blog.scss */
+.page-content {
+  margin-top: 10em;
+}
+/* line 48, ../sass/blog.scss */
+.page-content img {
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  border-radius: 1em;
+  margin: 0 auto 2em;
+}
+/* line 52, ../sass/blog.scss */
 .page-content .timeline {
   border-left: 3px solid white;
   height: 100%;
-  width: 100%;
-  margin: 0 1.5em;
+  width: 80%;
+  margin-left: 20%;
+  -webkit-box-shadow: -2px 0px 0px rgba(100, 100, 100, 0.15);
+  -moz-box-shadow: -2px 0px 0px rgba(100, 100, 100, 0.15);
+  box-shadow: -2px 0px 0px rgba(100, 100, 100, 0.15);
 }
-/* line 49, ../sass/blog.scss */
+/* line 59, ../sass/blog.scss */
 .page-content .blog-posts {
   min-height: 500px;
   margin: 0 3em 0 3em;
   color: #443b35;
 }
-/* line 50, ../sass/blog.scss */
+/* line 60, ../sass/blog.scss */
 .page-content .blog-posts p {
   font-size: 1.25em;
 }
-/* line 57, ../sass/blog.scss */
+/* line 67, ../sass/blog.scss */
 .page-content .blog-posts .content {
   padding: 2em;
   position: relative;
 }
-/* line 60, ../sass/blog.scss */
+/* line 70, ../sass/blog.scss */
 .page-content .blog-posts .content .tag {
   position: absolute;
   right: 0;
@@ -43,78 +64,187 @@ body.blog {
   max-width: 50px;
   background: green;
 }
-/* line 69, ../sass/blog.scss */
+/* line 79, ../sass/blog.scss */
 .page-content .blog-posts h2 {
   font-size: 2em;
   font-weight: bold;
+  margin-bottom: 1em;
 }
-/* line 74, ../sass/blog.scss */
+/* line 85, ../sass/blog.scss */
 .page-content div[id*='post-'] {
   background: white;
+  margin-bottom: 100px;
+  position: relative;
   -webkit-border-radius: 2em;
   -moz-border-radius: 2em;
   -ms-border-radius: 2em;
   -o-border-radius: 2em;
   border-radius: 2em;
-  margin-bottom: 100px;
-  position: relative;
+  -webkit-box-shadow: -3px 3px 10px rgba(50, 50, 51, 0.5);
+  -moz-box-shadow: -3px 3px 10px rgba(50, 50, 51, 0.5);
+  box-shadow: -3px 3px 10px rgba(50, 50, 51, 0.5);
 }
-/* line 81, ../sass/blog.scss */
+/* line 94, ../sass/blog.scss */
 .page-content .post-indicator {
   width: 10px;
   height: 10px;
+  background: white;
+  position: relative;
+  position: absolute;
+  top: 70px;
+  left: -45px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  background: white;
-  position: relative;
-  position: absolute;
-  top: 40px;
-  left: -45px;
+  -webkit-box-shadow: -2px 0px 0px rgba(100, 100, 100, 0.15);
+  -moz-box-shadow: -2px 0px 0px rgba(100, 100, 100, 0.15);
+  box-shadow: -2px 0px 0px rgba(100, 100, 100, 0.15);
 }
-/* line 90, ../sass/blog.scss */
+/* line 104, ../sass/blog.scss */
 .page-content .post-indicator .point {
   position: absolute;
   top: -20px;
-  left: 10px;
+  left: 25px;
   border-top: 25px solid transparent;
   border-bottom: 25px solid transparent;
   border-right: 20px solid white;
 }
-/* line 99, ../sass/blog.scss */
+/* line 113, ../sass/blog.scss */
 .page-content .date {
+  text-shadow: -1px 1px rgba(100, 100, 100, 0.3);
   position: absolute;
-  left: -113px;
-  top: 5px;
+  left: -100px;
+  top: 32px;
   color: white;
   font-weight: bold;
 }
-/* line 105, ../sass/blog.scss */
+/* line 120, ../sass/blog.scss */
 .page-content .date span {
   display: block;
   text-align: center;
 }
-/* line 109, ../sass/blog.scss */
+/* line 124, ../sass/blog.scss */
 .page-content .date .M {
   font-size: 1.5em;
 }
-/* line 110, ../sass/blog.scss */
+/* line 125, ../sass/blog.scss */
 .page-content .date .D {
   font-size: 2.5em;
   margin: 0.2em 0;
 }
-/* line 114, ../sass/blog.scss */
+/* line 128, ../sass/blog.scss */
 .page-content .links {
   clear: both;
   width: 100%;
 }
-/* line 117, ../sass/blog.scss */
+/* line 131, ../sass/blog.scss */
 .page-content .links .share, .page-content .links .comment {
   float: left;
 }
-/* line 120, ../sass/blog.scss */
+/* line 134, ../sass/blog.scss */
 .page-content .links .share .ss-icon {
   font-size: 2em;
+}
+/* line 138, ../sass/blog.scss */
+.page-content .category {
+  position: absolute;
+  right: -1px;
+  top: 2em;
+  z-index: 3;
+  text-shadow: -1px -1px rgba(49, 49, 49, 0.5);
+}
+/* line 144, ../sass/blog.scss */
+.page-content .category .pointer {
+  position: absolute;
+  left: 0.1em;
+  top: 0;
+  width: 0px;
+  height: 0px;
+  border-top: 1.1em solid transparent;
+  border-bottom: 1.1em solid transparent;
+  border-left: 1em solid rgba(0, 0, 0, 0.4);
+}
+/* line 154, ../sass/blog.scss */
+.page-content .category .pointer::after {
+  content: '';
+  position: absolute;
+  left: -1.17em;
+  top: -1em;
+  width: 0px;
+  height: 0px;
+  border-top: 1.1em solid transparent;
+  border-bottom: 1.1em solid transparent;
+  border-left: 1em solid white;
+}
+/* line 166, ../sass/blog.scss */
+.page-content .category a {
+  color: white;
+  padding: .2em 2em .2em 4em;
+  background: green;
+  border-bottom: green .2em solid;
+  display: block;
+}
+/* line 172, ../sass/blog.scss */
+.page-content .category a span {
+  width: 2em;
+  height: 2em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 1.5em;
+  background: url("../../img/icons_sprite.png") -345px -104px;
+}
+/* line 181, ../sass/blog.scss */
+.page-content .category a p {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+/* line 190, ../sass/blog.scss */
+.filters {
+  text-shadow: -1px 1px rgba(100, 100, 100, 0.3);
+  clear: both;
+  color: white;
+  font-size: 1.25em;
+}
+/* line 195, ../sass/blog.scss */
+.filters h3 {
+  text-align: center;
+}
+/* line 198, ../sass/blog.scss */
+.filters a {
+  color: white;
+  margin: 0 1em;
+  float: left;
+  text-align: center;
+}
+/* line 204, ../sass/blog.scss */
+.filters a:hover, .filters a:focus {
+  font-weight: bold;
+}
+/* line 209, ../sass/blog.scss */
+.filters a span {
+  display: block;
+  width: 3.5em;
+  height: 3.5em;
+  background: green;
+  margin: .5em auto;
+  border: 0.2em white solid;
+  -webkit-transition: border 1s, width 1s, height 1s;
+  -moz-transition: border 1s, width 1s, height 1s;
+  -o-transition: border 1s, width 1s, height 1s;
+  transition: border 1s, width 1s, height 1s;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 219, ../sass/blog.scss */
+.filters .categories {
+  margin: 0 auto;
+  clear: both;
 }

@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width">
     <title>Alice Yuan</title>
 
-    <link rel="stylesheet" href="css/stylesheets/screen.css" media="screen, projection"  type="text/css" />
-    <link rel="stylesheet" href="css/stylesheets/style.css">
-    <link rel="stylesheet" href="css/stylesheets/responsive.css">
     <link rel="stylesheet" href="font/windsong/stylesheet.css">
     <link rel="stylesheet" href="font/quicksand/stylesheet.css">
     <link rel="stylesheet" href="font/ss-social/stylesheet.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/stylesheets/screen.css" media="screen, projection"  type="text/css" />
+    <link rel="stylesheet" href="css/stylesheets/style.css">
+    <link rel="stylesheet" href="css/stylesheets/blog.css">
+    <link rel="stylesheet" href="css/stylesheets/responsive.css">
     <link rel="stylesheet" href="css/stylesheets/print.css" media="print"  type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="plugin/bootstrap/js/bootstrap.min.js" ></script>
     <script type="text/javascript" src="js/jquery.transit.js" ></script>
     <script type="text/javascript" src="js/jquery.fittext.js"></script>
     <script type="text/javascript" src="font/ss-social/ss-social.js"></script>
@@ -37,14 +38,38 @@
 
   <!-- Alice Yuan copyright 2012 -->
 
-  <body class="front portrait screen-width-small">
+  <body class="blog portrait screen-width-small">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  <a name="top"></a>
+
+
+
+
+
+
+
   <div class="main-menu-wrapper gradient top clearfix">
     <div class="main-menu clearfix">
       <div class="logo">
-        <a href="#"> <h1> AY </h1> </a>
+        <a href="/"> <h1> AY </h1> </a>
       </div>
       <div class="nav clearfix">
         <ul class="clearfix">
+          <!-- <li class="active home"><a href="#"> -->
+          <!--   <p> Home </p><div class="button-outer"> -->
+          <!--     <img class="icon big" src="img/white/home_32x32.png"> </img> -->
+          <!--     <div class="button-inner active"></div></div> -->
+          <!-- </a> </li> -->
           <li class="about" ><a href="about">
             <p>About</p><div class="button-outer">
               <img class="icon small" src="img/white/book_alt2_32x28.png"> </img>
@@ -81,91 +106,200 @@
   <div class="main-wrapper">
     <div class="main">
 
-      <div class="page-title-wrapper">
+      <div class="page-title-wrapper small">
         <a href="/" >
-          <div class="page-title clearfix">
+          <div class="page-title clearfix small">
               <h1>
-                <!-- <span class="alice">Alice's</span> -->
-                <span class="blog">Blog </span>
+                <span class="artworks"> Artworks </span>
               </h1>
           </div>
         </a>
 
 
-        <div class="slogan subtitle">
+        <div class="subtitle">
           <h2>
-            <p class="line1">
-              <span class="program">I program.</span>
-              <span class="design">I design.</span>
-            </p>
-            <p class="line2">
-              <span class="create">I create.</span>
-              <span class="innovate">I innovate.</span>
-            </p>
           </h2>
+        </div> <!-- end subtitle -->
+      <!-- <div class="social links ss-icon"> -->
+      <!--   <ul> -->
+      <!--     <li><a class="facebook" href="//facebook.com" title="facebook me">facebook<span/></a></li> -->
+      <!--     <li><a class ="twitter" href="//twitter.com" title="@Names_Alice">twitter<span/></a></li> -->
+      <!--     <li><a class="linkedin" href="//linkedin.com" title="LinkedIn">linkedin<span/></a></li> -->
+      <!--     <li><a class="googleplus" href="//plus.google.com" title="+1 me">googleplus<span/></a></li> -->
+      <!--   </ul> -->
+      <!-- </div> -->
+
+
+      </div>
+
+      <div class="filters">
+        <div class="categories clearfix">
+          <a href="#">
+            <span> </span>
+            tutorials
+          </a>
+          <a href="#">
+            <span> </span>
+            life
+          </a>
+          <a href="#">
+            <span> </span>
+            design
+          </a>
+          <a href="#">
+            <span> </span>
+            discovery
+          </a>
         </div>
       </div>
 
 
 
 
-      <div class="recent-posts clearfix">
-        <div class="recent-title">
-          <a href="blog"><h1> Recent Posts </h1></a>
+      <div class="page-content">
+        <div class="timeline">
+          <div class="blog-posts clearfix">
+            <div id="post-08172012" class="post-1">
+              <div class="post-indicator">
+                <div class="point"> </div>
+              </div>
+              <div class="date">
+                <p> <span class="M">Aug</span>
+                <span class="D">17 </span>
+                <span class="Y">2012</span>
+                </p>
+              </div>
+              <div class="category">
+                <div class="pointer"></div>
+                <a href="#">
+                  <span></span>
+                  <p>discovery</p>
+                </a>
+              </div>
+              <div class="content">
+                <h2 class="title"> Title Title Title Title Title </h2>
+                <div class="body">
+                  <p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu sapien turpis. Integer fermentum, nibh at ullamcorper commodo, nisl augue ullamcorper lorem, id gravida mauris massa vitae urna. Morbi semper viverra orci, ut rhoncus risus vulputate vel. Ut nunc purus, ultricies vel faucibus ac, viverra ac tortor. Phasellus ornare consectetur ipsum, quis dictum nunc vehicula id. Etiam consequat scelerisque luctus. Aenean dictum enim sed ante cursus sit amet tincidunt dui pharetra. Mauris nec arcu in neque blandit adipiscing quis sit amet leo.
+  </p>
+  <p>
+  In hac habitasse platea dictumst. Ut placerat orci in ipsum rhoncus sit amet sagittis ligula interdum. Pellentesque cursus, nisi sed molestie mattis, tellus mauris ultrices lectus, ut tincidunt est magna elementum nibh. Fusce sit amet nunc at diam hendrerit lacinia. Maecenas rutrum tempus lorem laoreet semper. Sed imperdiet, nunc in fringilla sollicitudin, ligula purus molestie leo, non commodo nibh sapien nec orci. Maecenas sit amet velit justo. Vivamus vehicula eros a turpis sagittis imperdiet elementum leo tempor. Quisque gravida convallis adipiscing.
+  </p>
+  <p>
+  Suspendisse potenti. Duis consequat erat facilisis nunc bibendum faucibus. Cras vel iaculis nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. In nec purus purus. Quisque sit amet enim velit.
+  </p>
+  <p>
+  Aliquam erat volutpat. Maecenas turpis velit, malesuada id laoreet dapibus, aliquet ornare mauris. Mauris in sem vel justo fringilla iaculis quis eget mi. Vestibulum aliquet ligula vel ipsum vestibulum lacinia. Ut nec justo et urna aliquet laoreet in ut mi. Aenean a nisi mollis justo vulputate posuere. Etiam ut scelerisque nunc. Etiam porttitor iaculis ipsum a semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin lobortis placerat. Vivamus rutrum odio vel enim congue imperdiet. Mauris nisi libero, auctor et pharetra ultricies, scelerisque id erat. Nulla suscipit dignissim tellus, et aliquet massa imperdiet et. Maecenas et nisi mauris.
+                  </p>
+                </div>
+              </div> <!-- content ends -->
+              <div class="">
+              </div>
+            </div> <!-- post ends -->
+
+
+
+
+            <div id="post-08172012" class="post-1">
+              <div class="post-indicator">
+                <div class="point"> </div>
+              </div>
+              <div class="date">
+                <p> <span class="M">Jun</span>
+                <span class="D">27 </span>
+                <span class="Y">2012</span>
+                </p>
+              </div>
+              <div class="content">
+                <h2 class="title"> Title Title Title Title Title </h2>
+                <div class="body">
+                  <p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu sapien turpis. Integer fermentum, nibh at ullamcorper commodo, nisl augue ullamcorper lorem, id gravida mauris massa vitae urna. Morbi semper viverra orci, ut rhoncus risus vulputate vel. Ut nunc purus, ultricies vel faucibus ac, viverra ac tortor. Phasellus ornare consectetur ipsum, quis dictum nunc vehicula id. Etiam consequat scelerisque luctus. Aenean dictum enim sed ante cursus sit amet tincidunt dui pharetra. Mauris nec arcu in neque blandit adipiscing quis sit amet leo.
+  </p>
+  <p>
+  In hac habitasse platea dictumst. Ut placerat orci in ipsum rhoncus sit amet sagittis ligula interdum. Pellentesque cursus, nisi sed molestie mattis, tellus mauris ultrices lectus, ut tincidunt est magna elementum nibh. Fusce sit amet nunc at diam hendrerit lacinia. Maecenas rutrum tempus lorem laoreet semper. Sed imperdiet, nunc in fringilla sollicitudin, ligula purus molestie leo, non commodo nibh sapien nec orci. Maecenas sit amet velit justo. Vivamus vehicula eros a turpis sagittis imperdiet elementum leo tempor. Quisque gravida convallis adipiscing.
+  </p>
+  <p>
+  Suspendisse potenti. Duis consequat erat facilisis nunc bibendum faucibus. Cras vel iaculis nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. In nec purus purus. Quisque sit amet enim velit.
+  </p>
+  <img src="img/stock1.jpg"/>
+  <p>
+  Aliquam erat volutpat. Maecenas turpis velit, malesuada id laoreet dapibus, aliquet ornare mauris. Mauris in sem vel justo fringilla iaculis quis eget mi. Vestibulum aliquet ligula vel ipsum vestibulum lacinia. Ut nec justo et urna aliquet laoreet in ut mi. Aenean a nisi mollis justo vulputate posuere. Etiam ut scelerisque nunc. Etiam porttitor iaculis ipsum a semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin lobortis placerat. Vivamus rutrum odio vel enim congue imperdiet. Mauris nisi libero, auctor et pharetra ultricies, scelerisque id erat. Nulla suscipit dignissim tellus, et aliquet massa imperdiet et. Maecenas et nisi mauris.
+                  </p>
+                </div>
+              </div> <!-- content ends -->
+              <div class="links">
+                <!-- <div class="share"> -->
+                <!--   <p>Share this on:</p> -->
+                <!-- </div> -->
+                <!-- <div class="comment"> -->
+                <!--   <a href="comment"> <p> Comment >> </p> </a> -->
+                <!-- </div> -->
+              </div>
+
+
+            </div> <!-- post ends -->
+
+
+            <div id="post-08172012" class="post-1">
+              <div class="post-indicator">
+                <div class="point"> </div>
+              </div>
+              <div class="date">
+
+              </div>
+              <div class="content">
+                <h2 class="title"> Title Title Title Title Title </h2>
+                <div class="body">
+                  <p>
+                  <p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu sapien turpis. Integer fermentum, nibh at ullamcorper commodo, nisl augue ullamcorper lorem, id gravida mauris massa vitae urna. Morbi semper viverra orci, ut rhoncus risus vulputate vel. Ut nunc purus, ultricies vel faucibus ac, viverra ac tortor. Phasellus ornare consectetur ipsum, quis dictum nunc vehicula id. Etiam consequat scelerisque luctus. Aenean dictum enim sed ante cursus sit amet tincidunt dui pharetra. Mauris nec arcu in neque blandit adipiscing quis sit amet leo.
+  </p>
+  <p>
+  In hac habitasse platea dictumst. Ut placerat orci in ipsum rhoncus sit amet sagittis ligula interdum. Pellentesque cursus, nisi sed molestie mattis, tellus mauris ultrices lectus, ut tincidunt est magna elementum nibh. Fusce sit amet nunc at diam hendrerit lacinia. Maecenas rutrum tempus lorem laoreet semper. Sed imperdiet, nunc in fringilla sollicitudin, ligula purus molestie leo, non commodo nibh sapien nec orci. Maecenas sit amet velit justo. Vivamus vehicula eros a turpis sagittis imperdiet elementum leo tempor. Quisque gravida convallis adipiscing.
+  </p>
+  <p>
+  Suspendisse potenti. Duis consequat erat facilisis nunc bibendum faucibus. Cras vel iaculis nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. In nec purus purus. Quisque sit amet enim velit.
+  </p>
+  <p>
+  Aliquam erat volutpat. Maecenas turpis velit, malesuada id laoreet dapibus, aliquet ornare mauris. Mauris in sem vel justo fringilla iaculis quis eget mi. Vestibulum aliquet ligula vel ipsum vestibulum lacinia. Ut nec justo et urna aliquet laoreet in ut mi. Aenean a nisi mollis justo vulputate posuere. Etiam ut scelerisque nunc. Etiam porttitor iaculis ipsum a semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin lobortis placerat. Vivamus rutrum odio vel enim congue imperdiet. Mauris nisi libero, auctor et pharetra ultricies, scelerisque id erat. Nulla suscipit dignissim tellus, et aliquet massa imperdiet et. Maecenas et nisi mauris.
+                  </p>
+                  </p>
+                </div>
+              </div> <!-- content ends -->
+            </div> <!-- post ends -->
+
+
+          </div>
         </div>
-        <div class="post-1">
-          <div class="col-1">
-            <img src="img/stock.jpg"/>
-          </div>
-          <div class="col-2">
-            <div class="content">
-              <h2> This is a blog title </2>
-              <h3> Posted: Aug 16 2012 </h3>
-              <p> This is the description  This is the description  This is the description This is the description This is the description This is the description This is the description</p>
-              <a href="/"> Read More >> </a>
-            </div>
-          </div>
-        </div>
+      </div> <!-- page-content ends -->
+
+    </div> <!-- main end -->
+    <div class="scroll-top">
+      <a href="#">
+        <span class="arrow"></span>
+      </a>
+    </div>
 
 
-        <div class="post-1">
-          <div class="col-1">
-            <img src="img/stock.jpg"/>
-          </div>
-          <div class="col-2">
-            <div class="content"
-              <h2> This is a blog title </2>
-              <h3> Posted: Aug 16 2012 </h3>
-              <p> This is the description  This is the description  This is the description This is the description This is the description This is the description This is the description</p>
-              <a href="/"> Read More >> </a>
-            </div>
-          </div>
-        </div>
 
-
-      </div>
+    <div class="footer">
+      <p>
+        <span class="copyright">
+          &copy Copyright 2012 Alice Yuan.
+        </span>
+        <span class="allrights">
+          <br>All rights reserved.
+        </span>
+      </p>
+      <ul class="clearfix">
+        <li> <a href="#" title="contact me!">Contact</a></li>
+        <li> <a title="check site out on github" href="#">Github me</a></li>
+        <li> <a href="#" title="subscribe to RSS">RSS Feed</a></li>
+      </ul>
 
     </div>
-  <!--   <div class="footer"> -->
-  <!--     <p> -->
-  <!--     <span class="copyright"> -->
-  <!--       &copy Copyright 2012 Alice Yuan. -->
-  <!--     </span> -->
-  <!--     <span class="allrights"> -->
-  <!--       All rights reserved. -->
-  <!--     </span> -->
-  <!--     </p> -->
-
-  <!--     <div class="social links ss-icon"> -->
-  <!--       <ul> -->
-  <!--         <li><a class="facebook" href="//facebook.com" title="facebook me">facebook<span/></a></li> -->
-  <!--         <li><a class ="twitter" href="//twitter.com" title="@Names_Alice">twitter<span/></a></li> -->
-  <!--         <li><a class="linkedin" href="//linkedin.com" title="LinkedIn">linkedin<span/></a></li> -->
-  <!--         <li><a class="googleplus" href="//plus.google.com" title="+1 me">googleplus<span/></a></li> -->
-  <!--       </ul> -->
-  <!--     </div> -->
-  <!--   </div> -->
-  <!-- </div> <!-- main-wrapper ends -->
+  </div> <!-- main-wrapper ends -->
 
   </body>
 </html>

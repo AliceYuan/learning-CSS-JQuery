@@ -26,13 +26,16 @@ $default-button-color: #00CCCC;
  * Menu -Styling -menu on top
  * ==========================================================================*/
 
-// body.portrait, body.landscape.screen-width-xsmall, body.landscape.screen-width-small{
-@media (max-width: 767px ) {
+/* ==========================================================================
+ * Menu -General Styling for Portrait mode
+ * ==========================================================================*/
+@media (max-width: 1023px ) {
   .logo{
     width: auto;
     height: 100%;
   }
   .main-menu-wrapper{
+    @include box-shadow( 0 2px 3px rgba(43, 43, 43, 0.4));
     min-width: 100%;
     position: absolute;
       left:0;
@@ -61,18 +64,30 @@ $default-button-color: #00CCCC;
     }
   }
 
+  .recent-posts{
+    width: 82%;
+    margin: 0 4%;
+  }
+
+
+  .scroll-top{
+    position: fixed;
+      bottom: 20px;
+      right: 20px;
+    min-width: 0;
+  }
+
 }
 
-@media (min-width: 767px) and (max-width: 1260px){
+@media (min-width: 1023px) and (max-width: 1260px){
   .main{
-    margin-right: 7em !important;
   }
 }
 
-/*larger screen sizes -- menu bigger*/
-// body.portrait.screen-width-small,
-// body.portrait.screen-width-medium, body.portrait.screen-width-large{
-@media (max-width: 767px) and (min-width: 480px) {
+/* ==========================================================================
+ * Menu -Big Menu Portrait mode styling
+ * ==========================================================================*/
+@media (max-width: 1023px) and (min-width: 480px) {
   .logo{
     a{
       padding: 0 6px;
@@ -136,13 +151,9 @@ $default-button-color: #00CCCC;
 
 }
 
-// /*small screen sizes -- menu smaller*/
-// body.landscape.screen-width-xsmall.screen-height-small,
-// body.landscape.screen-width-xsmall.screen-height-medium,
-// body.landscape.screen-width-xsmall.screen-height-large,
-// body.screen-width-xsmall, body.landscape.screen-width-small,
-// body.landscape.screen-width-small,
-// body.portrait.screen-width-small.screen-height-small{
+/* ==========================================================================
+ * Menu -Small Menu Portrait mode styling
+ * ==========================================================================*/
 @media (max-width: 479px) {
   .logo{
     margin-right: 1em;
@@ -207,10 +218,10 @@ $default-button-color: #00CCCC;
   }
 
   .nav img.icon{
-    left:     19px;
-    top:      19px;
-    width:    20px;
-    height:   19px;
+    left:   18px;
+    top:    19px;
+    width:  15px;
+    height: 14px;
   }
 }
 
@@ -219,18 +230,18 @@ $default-button-color: #00CCCC;
  * ==========================================================================*/
 
 /* ==========================================================================
- * Menu -Styling - menu on right
+ * General Styling Landscape mode
  * ==========================================================================*/
-// body.landscape.screen-width-medium, body.landscape.screen-width-large{
-@media (min-width: 768px){
+@media (min-width: 1024px){
   .logo{
     width: 100%;
     height: auto;
   }
   .main-menu-wrapper{
+    @include box-shadow( 2px 0 3px rgba(43, 43, 43, 0.4));
     position:fixed;
       top:0;
-      right: 0;
+      left: 0;
     height: 100%;
     overflow: hidden;
     .nav{
@@ -250,22 +261,28 @@ $default-button-color: #00CCCC;
       text-align: center;
       z-index: 5;
     }
-    a:hover p, a:focus p{// a:active p{
+  }
+  .scroll-top{
+    position: fixed;
+      bottom: 50px;
+      right: 70px;
+    min-width: 8em;
+  }
 
-    }
+  .recent-posts{
+    width: 90%;
+    margin: 0;
   }
 }
-/*larger screen size --menu bigger */
-// body.landscape.screen-height-medium,
-// body.landscape.screen-height-large,
-// body.landscape.screen-height-small.screen-width-medium,
-// body.landscape.screen-height-small.screen-width-large{
-@media (min-width: 768px ) and (min-height: 480px) {
+/* ==========================================================================
+ * Menu Styling -Big Menu Landscape Mode
+ * ==========================================================================*/
+@media (min-width: 1024px ) and (min-height: 480px) {
   .logo{
     height: auto;
     margin-bottom: 15%;
     a{
-      padding: 10px 0;
+      padding: 1em 0;
     }
     h1{
       font-size: 4em;
@@ -314,7 +331,7 @@ $default-button-color: #00CCCC;
     }
   }
   .main-wrapper{
-    margin-right: 7em;
+    margin-left: 7em;
     .main{
       margin: 0.5em auto;
     }
@@ -327,10 +344,10 @@ $default-button-color: #00CCCC;
   }
 }
 
-/*smaller screen size --menu smaller */
-// body.landscape.screen-height-xsmall.screen-width-medium,
-// body.landscape.screen-height-xsmall.screen-width-large{
-@media (min-width: 768px ) and (max-height: 479px) {
+/* ==========================================================================
+ * Menu Styling -Small Menu Landscape Mode
+ * ==========================================================================*/
+@media (min-width: 1024px ) and (max-height: 479px) {
   .logo{
     height: auto;
     margin-bottom: 10%;
@@ -388,16 +405,16 @@ $default-button-color: #00CCCC;
     }
   }
   .main-wrapper{
-    margin-right: 4em;
+    margin-left: 4em;
     .main{
       margin: 0.5em auto;
     }
   }
   .nav img.icon{
-    left:     19px;
-    top:      19px;
-    width:    20px;
-    height:   19px;
+    left: 18px;
+    top: 19px;
+    width: 15px;
+    height: 14px;
   }
 }
 
@@ -427,10 +444,11 @@ $default-button-color: #00CCCC;
   }
   .slogan{
     h2 > p:nth-child(1) {
-      margin-right: 180px;
+      margin-right: 160px;
     }
   }
   .page-title-wrapper .slogan{
+    top: 27% !important;
     h2{
       font-size: 1.2em;
       span{
@@ -438,10 +456,25 @@ $default-button-color: #00CCCC;
       }
     }
   }
+
+  .recent-posts{
+    [class*='post-']{
+      height: 14em;
+    }
+    [class*='col-']{
+      width: 90%;
+      margin: 0 5%;
+      float: left;
+      min-height: 5em;
+    }
+    .col-1{
+    }
+  }
 }
 
-@media (min-width: 480px) and (max-width: 590px) {
+@media (min-width: 480px) and (max-width: 630px) {
   .page-title-wrapper .slogan{
+    top: 27% !important;
     h2{
       span{
         display: block;
@@ -449,7 +482,7 @@ $default-button-color: #00CCCC;
     }
   }
 }
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .page-title-wrapper{
     margin: 5em auto;
     .page-title{
@@ -480,10 +513,20 @@ $default-button-color: #00CCCC;
     }
   }
 
+  .recent-posts{
+    [class*='col-']{
+      width: 85%;
+      margin: 0 7.5%;
+      float: left;
+      min-height: 5em;
+    }
+    .col-1{
+    }
+  }
 }
 
 //width only responsive design min width standard tablet size
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   //responsive title
   .page-title-wrapper{
     margin: 5em auto;
@@ -492,7 +535,7 @@ $default-button-color: #00CCCC;
       width: 2.7em;
       height: 2.7em;
       h1{
-        margin: 0.8em 0.6em;
+        margin: 0.7em 0.6em 0;
         span{
           line-height: 0.8em;
         }
@@ -512,7 +555,7 @@ $default-button-color: #00CCCC;
 }
 
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1100px) {
   .page-title-wrapper .slogan{
     h2{
       font-size: 1.9em;
@@ -520,7 +563,7 @@ $default-button-color: #00CCCC;
   }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1101px){
   .page-title-wrapper .slogan{
     h2{
       font-size: 2.3em;
