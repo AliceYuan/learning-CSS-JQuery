@@ -363,6 +363,7 @@ a:visited{
   color: $dark_text;
   padding: 2em 5%;
   @include border-radius(20px);
+  @include box-shadow( -3px 4px 10px rgba(77, 77, 77, 0.56));
   a{
     color: $dark_text;
   }
@@ -370,7 +371,7 @@ a:visited{
     h2{
       color: #665F5A;
     }
-    p{
+    .content p{
       text-decoration: underline;
     }
   }
@@ -390,13 +391,15 @@ a:visited{
     font-size: 1.2em;
   }
   [class*='post-']{
-    width: 82%;
+    width: 100%;
     overflow: hidden;
     float: left;
     border-top: 1px solid #F0F0E5;
     border-right: 1px solid #F0F0E5;
     position: relative;
-    padding: 9%;
+    .content{
+      padding: 6%;
+    }
     .date{
       position: absolute;
         top: 0;
@@ -404,9 +407,10 @@ a:visited{
       width: 5em;
       height: 5em;
       background: beige;
-      @include border-radius(0 0 0 0.5em);
+      padding: 9%;
       font-size: .6em;
       padding: 1em;
+      @include border-radius(0 0 0 0.5em);
       @include box-shadow(2px -2px 2px #F0F0E5);
         color: $dark_text;
         font-weight: bold;
@@ -426,11 +430,13 @@ a:visited{
     }
   }
   [class*='col-']{
-    width: 47.5%;
+    width: 49.5%;
     float: left;
     min-height: 5em;
+    border-bottom: 1px solid #F0F0E5;
   }
   .col-1{
+    border-left: 1px solid #F0F0E5;
   }
   .col-2{
   }

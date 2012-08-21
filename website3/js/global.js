@@ -19,7 +19,7 @@ function windowLoad(){
 
 
 function resizeText(){
-  $('h1, h2, .social.links').each( function($index) {
+  $('h1, h2, .social.links').each( function(index) {
      while( $(this).outerWidth() > $('body .main-wrapper .main').outerWidth()*0.95) {
       $(this).css( 'font-size', (parseInt($(this).css('font-size')) - 2) + 'px');
      }
@@ -29,6 +29,7 @@ function resizeText(){
   });
 }
 
+// Resizes Page Title
 function resizeTitle(){
   var $title = $('.main .page-title');
   var titleW = $title.width();
@@ -40,6 +41,7 @@ function resizeTitle(){
   // equalHeightWidth($title);
 }
 
+//centers Main div inside wrapper. Accounts for menu on left side
 function centerMain(){
   var mainW = $('.main-wrapper').width();
   var windowW = $(window).width();
@@ -55,23 +57,36 @@ function centerMain(){
       'width': '100%',
     });
   }
-  //   $('.main').css({
-  //     'height': '100%',
-  //     'width': '100%',
-  //   });
-  // if(mainMT == 0) {
-  //   $('.main-wrapper').css({
-  //   'width': (mainW - mainMR)+'px',
-  //   'height': '100%',
-  // });
-  // } else {
 }
 
 function resize(){
   centerMain();
   resizeTitle();
-  blog();
+  blogPage();
+  frontPage();
+
 }
+
+
+//javascript functions for blog page
+function blogPage(){
+  if ($('body').hasClass('blog')){
+    centerHorizontal($('.filters .categories'), $('.filters'));
+  }
+}
+
+//functions specifically for front page
+function frontPage(){
+  if ($('body').hasClass('front')){
+    equalHeight($('.recent-posts ul li'));
+  }
+}
+
+
+// =============================================================
+// Reuseable Functions
+// ============================================================
+
 
 //function makes height the same as the width of an object
 function equalHeightWidth($object){
@@ -87,7 +102,7 @@ function centerVertical($object, $parentObject){
   });
 }
 
-
+//function centers the object horizontally within the parent object
 function centerHorizontal($object, $parentObject){
   var parentW = $parentObject.width();
   var objectW = $object.width();
@@ -95,10 +110,19 @@ function centerHorizontal($object, $parentObject){
     'margin-left': ((parentW - objectW)/2)+'px',
   });
 }
-//javascript functions for blog page
-function blog(){
-  if ($('body').hasClass('blog')){
-    centerHorizontal($('.filters .categories'), $('.filters'));
 
-  }
+//function makes all objects the same height
+function equalHeight($object){
+  var maxHeight = 0;
+  var index;
+  $object.removeAttr('style');
+  $object.each(function(index){
+    var currentHeight = $(this).height();
+    if (currentHeight > maxHeight){
+      maxHeight = currentHeight;
+    }
+  });
+  $object.each(function(index){
+    $(this).height(maxHeight);
+  });
 }
