@@ -43,7 +43,7 @@ body.blog .main-wrapper .main .page-title-wrapper .page-title h1 {
 /* =========================================================================
  * Blog Page Content Styling
  * ==========================================================================*/
-.page-content{
+body.blog .page-content{
   margin-top: 10em;
   img{
     @include border-radius(1em);
